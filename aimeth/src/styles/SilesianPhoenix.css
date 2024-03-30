@@ -1,0 +1,59 @@
+.silesianPhoenix {
+  height: 200vh;
+  width: 100vw;
+  margin-top: -10vh;
+  background-color: black;
+
+  color: white;
+}
+
+.parallaxPage {
+  position: sticky;
+  top: 30vh;
+
+  height: 50vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.parallax {
+  position: absolute;
+  top: 250vh;
+}
+.lazikTest {
+  height: 112.5vh;
+  width: 90vh;
+  background-position: center;
+  background-size: 110%;
+  position: relative;
+  top: 0vh;
+  transition: 0.5s;
+  
+}
+
+.testowy{
+  height: 100vh;
+  width: 100vw;
+  background-color: blue;
+}
+
+
+.parallaxPage>p{
+  font-size: 2vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  width: 25vw;
+  height: 70vh;
+  background-color: aqua;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: -10vh;
+  left: 10vw;
+
+}

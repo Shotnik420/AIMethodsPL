@@ -1,0 +1,106 @@
+.titleParallax {
+  width: 100vw;
+  height: 170vh;
+  background-color: rgb(0, 0, 0);
+  background-image: url(../img/parallaxTite/placeholder.png);
+  background-position: 0vh 5vh;
+  background-size: 100% 65%;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+ 
+  position: relative;
+  top: -3.5vh;
+  margin-bottom: -3.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.parallaxHolder{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0vh;
+  overflow: hidden;
+}
+ .titleParallaxObject{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  overflow: hidden;
+
+ }
+
+ .titleParallax--1{
+  background-image: url(../img/parallaxTite/01.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 200vh;
+  top: -2vh;
+  z-index: 6;
+ }
+ 
+ .titleParallax--2{
+  background-image: url(../img/parallaxTite/02.png);
+  background-size: 100% 100%;
+  top: -1vh;
+
+z-index: 5;
+ }
+ .titleParallax--3{
+  background-image: url(../img/parallaxTite/03.png);
+  background-size: 100% 100%;
+  top: -2vh;
+z-index: 3;
+ }
+ .titleParallax--4{
+  background-image: url(../img/parallaxTite/04.png);
+  background-size: 100% 100%;
+  top: -3vh;
+  z-index: 2;
+ }
+ .titleParallax--5{
+  background-image: url(../img/parallaxTite/05T.png);
+  top: 0vh;
+
+  background-size: 100% 100%;
+  z-index: 1;
+  
+ }
+
+
+
+ .titleParallaxLogo{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+  position: absolute;
+  top: 3vh;
+  left: -3vh;
+  background-image: url(https://sknaimeth.polsl.pl/wp-content/uploads/2022/12/logo_l-300x290.png);
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  z-index: 4;
+ }
+
+ .text{
+  position: relative;
+  top: 30vh;
+  left: -1.5vh;
+  font-size: 6vh;
+  font-weight: 700;
+  display: flex;
+  color: white;
+  text-shadow: 0px 5px 10px black;
+
+ }
+ .text > p{
+  padding-left: 1.5vh;
+  color: rgb(255, 123, 0);
+  
+ }
+

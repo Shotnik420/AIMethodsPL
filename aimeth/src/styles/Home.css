@@ -1,0 +1,26 @@
+.home {
+  height: auto;
+}
+.home {
+  --sb-track-color: var(--szary2);
+  --sb-thumb-color: var(--blue3);
+  --sb-size: 14px;
+}
+
+.home::-webkit-scrollbar {
+  width: 20px;
+  z-index: 10;
+}
+
+.home::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 8px;
+}
+
+.home::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 8px;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+}

@@ -1,0 +1,139 @@
+/* ===== Scrollbar ===== */
+/* Firefox */
+
+.LP::-webkit-scrollbar {
+  width: 10px;
+}
+
+.LP::-webkit-scrollbar-track {
+  background: var(--szary3);
+  border-radius: 8px;
+}
+
+.LP::-webkit-scrollbar-thumb {
+  background: var(--blue3);
+  border-radius: 8px;
+}
+
+.popUpKontent {
+  width: 90%;
+  height: 90%;
+  display: flex;
+}
+
+.LP {
+  width: 45%;
+  height: auto;
+
+  overflow-y: scroll;
+  margin-right: 5%;
+  text-align: left;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
+}
+.LP > h1 {
+  padding-top: 2vh;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 5vh;
+}
+
+.LP > h3 {
+  margin-top: 5vh;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5vh;
+}
+
+.LP > h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #9dbfe9;
+  margin-bottom: 5vh;
+}
+.LP > p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: justify;
+  line-height: 2rem;
+  margin-right: 5vh;
+}
+.LP > ol {
+  width: 80%;
+  height: auto;
+  margin-left: 1.5vw;
+  font-size: 1.4rem;
+}
+.LP > ol > li {
+  color: #cef5ff;
+  margin-bottom: 2vh;
+  transition: 300ms;
+}
+.LP > ol > li:hover {
+  color: #8ea8ff;
+  transform: scale(0.95);
+}
+
+.PP {
+  background-color: rgb(255, 255, 255);
+  background-size: auto 100%;
+  width: 50%;
+  height: 100%;
+  border-radius: 1vh;
+}
+
+.LP > ul {
+  width: 80%;
+  height: auto;
+  font-size: 1.3rem;
+  margin: 3vh 0;
+  margin-left: 6%;
+  font-weight: 300;
+  color: #ffffff;
+}
+.LP > ul > li {
+  padding: 1vh 0;
+}
+.imgBelt {
+  width: 95%;
+  height: 15vh;
+  margin-bottom: 4vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.imgBelt > a > img {
+  height: 100%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  transition: 300ms;
+  cursor: pointer;
+}
+.imgBelt > a > img:hover {
+  transform: scale(1.05);
+}
+.LP > a {
+  font-size: 1.3rem;
+  color: #b187ff;
+}
+
+.goBack2 {
+  background-color: var(--blue3);
+  position: fixed;
+  top: 6vh;
+  left: 5vw;
+  color: rgb(255, 255, 255);
+  font-size: 5vh;
+  width: 5vw;
+  border-radius: 2vh;
+  transition: 300ms;
+  z-index: 98;
+  width: 4vw;
+}
+
+.goBack2:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}

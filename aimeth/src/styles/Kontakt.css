@@ -1,0 +1,186 @@
+.kontakt_main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: #0c0c0c;
+  color: #fff;
+}
+
+.kontakt_main > p {
+  color: #74747f;
+  font-weight: bold;
+  font-size: 3vh;
+  padding: 4vh 0;
+}
+
+.kontakt_lp {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c0c0c;
+}
+
+.kontakt_lp > ol {
+  width: 40vw;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.kontakt_lp > ol > li {
+  font-size: 3vh;
+  padding: 2vh 0;
+  display: flex;
+  align-items: center;
+}
+.kontakt_lp > ol > li > svg {
+  font-size: 4vh;
+}
+
+.kontakt_lp > ol > li > h1 {
+  color: #ffffff;
+  font-size: 6vh;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.kontakt_lp > ol > li > h2 {
+  color: #fff;
+  font-size: 3.5vh;
+  text-align: center;
+}
+
+.kontakt_lp > ol > li > p {
+  font-size: 3vh;
+  margin-left: 1vw;
+}
+.kontakt_pp {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 2vh;
+  background-color: #141414;
+}
+
+.kontakt_pp > h1 {
+  font-size: 3rem;
+  margin-bottom: 2vh;
+}
+
+@media only screen and (max-width: 450px) {
+  .kontakt_main {
+    height: 100vh;
+    flex-direction: column;
+  }
+  .kontakt_lp {
+    width: 100vw;
+    justify-content: flex-end;
+  }
+  .kontakt_lp > ol {
+    width: 100vw;
+  }
+  .kontakt_lp > ol > li {
+    font-size: 3vh;
+    padding: 1vh 5vw;
+  }
+  .kontakt_lp > ol > li > svg {
+    font-size: 6vh;
+  }
+  .kontakt_pp {
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+  }
+  .kontakt_pp > iframe {
+    height: 70%;
+  }
+}
+
+.kontakt_czlonkowie {
+  height: 60vh;
+  width: 80vw;
+  padding: 5vh 10vw;
+  display: flex;
+  background-color: #222226;
+  justify-content: space-around;
+}
+
+.kontakt_czlonkowie2 {
+  height: 60vh;
+  width: 60vw;
+  padding: 5vh 20vw;
+  display: flex;
+  background-color: #222226;
+  justify-content: space-around;
+}
+
+.czlonek {
+  height: 100%;
+  width: 20vw;
+  object-fit: cover;
+  border-radius: 2vh;
+  overflow: hidden;
+  background-color: #507bd6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: 300ms;
+  text-align: center;
+}
+.czlonek > img {
+  height: 80%;
+
+  border-radius: 2vh;
+}
+.czlonek > h1 {
+  margin-bottom: 2vh;
+}
+.czlonek > p {
+  margin-bottom: 2vh;
+  font-size: 1.25rem;
+}
+.czlonek:hover {
+  transform: scale(0.98);
+}
+
+.kontakt_tytul > h1 {
+  font-size: 3rem;
+  height: 10vh;
+  background-color: #222226;
+  padding-left: 13vw;
+  padding-top: 5vw;
+}
+
+.Formularz {
+  width: 100vw;
+  height: 80vh;
+
+  display: flex;
+  justify-content: center;
+}
+.Formularz > h1 {
+  font-size: 4rem;
+  color: white;
+  padding-bottom: 2vh;
+}
+
+.Formularz_pp {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #0c0c0c;
+  flex-direction: column;
+  padding: 5vh 0;
+}
+.Formularz_pp > h1 {
+  font-size: 2.5rem;
+}

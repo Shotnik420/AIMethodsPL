@@ -1,0 +1,52 @@
+[
+  {
+    "id": 11,
+    "link": "https://kariera.bmzpoland.pl/",
+    "zdj": "spons11.png"
+  },
+  {
+    "id": 12,
+    "link": "https://www.anga.com.pl/",
+    "zdj": "spons12.png"
+  },
+  {
+    "id": 13,
+    "link": "https://www.altium.com/",
+    "zdj": "spons13.png"
+  },
+  {
+    "id": 9,
+    "link": "https://dabi.eu/pl/",
+    "zdj": "spons9.png"
+  },
+  {
+    "id": 10,
+    "link": "https://kono.com.pl/",
+    "zdj": "spons10.png"
+  },
+  {
+    "id": 14,
+    "link": "https://www.aiut.com.pl/pl/",
+    "zdj": "spons14.png"
+  },
+  {
+    "id": 15,
+    "link": "https://wielton.com.pl/",
+    "zdj": "spons15.png"
+  },
+  {
+    "id": 17,
+    "link": "https://devildesign.com/",
+    "zdj": "spons17.png"
+  },
+  {
+    "id": 18,
+    "link": "https://botland.com.pl/pl/",
+    "zdj": "spons18.png"
+  },
+  {
+    "id": 19,
+    "link": "https://pgosa.pl/",
+    "zdj": "spons19.png"
+  }
+]

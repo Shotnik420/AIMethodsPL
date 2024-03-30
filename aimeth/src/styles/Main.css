@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.Main {
+  height: 100vh;
+  width: 100vw;
+}
+.mainLogo {
+  width: 100vw;
+  height: 100vh;
+  /* height: 200vh; */
+  /* padding-top: 10vh; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainLogo > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mainLogoContent {
+  padding-top: 20vh;
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.678);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+
+.mainLogoContent > img {
+  height: 20vh;
+}
+.mainLogoContent > h1 {
+  font-size: 6rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+.mainGoDown {
+  width: 80vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 8vh;
+}
+
+.kreska {
+  width: 90%;
+  height: 0.3vh;
+  background-color: rgb(255, 255, 255);
+  filter: drop-shadow(0 0 0.3vh rgb(255, 255, 255));
+  animation: intro 2.5s ease-in-out;
+  margin-top: 6vh;
+}
+
+.goDown {
+  font-size: 4.5rem;
+
+  filter: drop-shadow(0 0 0.3vh rgb(255, 255, 255));
+  animation: intro2 2.5s ease-in-out;
+  transition: 300ms;
+  padding: 2vh 5vw;
+}
+.goDown:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  margin-top: 3vh;
+  font-size: 4rem;
+}
+
+@keyframes intro {
+  0% {
+    width: 0%;
+  }
+  80% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes intro2 {
+  0% {
+    opacity: 0;
+    margin-top: 0vh;
+  }
+  80% {
+    opacity: 0;
+    margin-top: 0vh;
+  }
+
+  100% {
+  }
+}

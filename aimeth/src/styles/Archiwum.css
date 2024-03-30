@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap");
+
+.Archiwum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  height: 150vh;
+  background-color: var(--szary2);
+  padding-top: 15vh;
+  text-align: center;
+}
+
+.Archiwum > h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 5vh;
+}
+
+.Archiwum > p {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--blue2);
+  margin-bottom: 5vh;
+}
+
+.projektyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4vh;
+  width: 75vw;
+  min-height: 110vh;
+  height: auto;
+  margin-bottom: 5vh;
+}
+
+.projektdiv {
+  transition: 0.2s;
+}
+
+.projektdiv:hover {
+  transform: scale(0.95);
+}
+.projekt {
+  width: 100%;
+  border-radius: 0.5vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.75);
+  background-size: 100% 71%;
+  transition: 0.5s;
+  cursor: pointer;
+
+  transform: scale(0.9);
+}
+
+.projekt:not(:first-child):hover {
+  transform: scale(0.95);
+}
+
+.projekt_tekst {
+  height: 10vh;
+  width: 100%;
+  background-color: var(--szary1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom-left-radius: 0.5vh;
+  border-bottom-right-radius: 0.5vh;
+}
+
+.projekt_tekst > p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.popup {
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  width: 90vw;
+  height: 90vh;
+  border-radius: 0.5vh;
+  background-color: rgb(22, 22, 22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.603);
+  backdrop-filter: blur(5px);
+  z-index: 99;
+}
+
+.popupClose {
+  width: 3.5vh;
+  height: 3.5vh;
+
+  font-size: 5vh;
+  color: white;
+
+  line-height: 3.5vh;
+
+  position: fixed;
+  top: 7vh;
+  right: 7vw;
+
+  z-index: 200;
+  transition: 0.3s;
+}
+
+.popupClose:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}

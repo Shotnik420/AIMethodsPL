@@ -1,0 +1,253 @@
+.Wspolpraca {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--szary3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.partnershipPhoto {
+  height: 55vh;
+  width: 100vw;
+  background-image: url(https://www.polsl.pl/uczelnia/wp-content/uploads/sites/880/2021/03/kampus-z-lotu-ptaka.jpg);
+  background-size: cover;
+  background-position: 0vh -55vh;
+  background-repeat: no-repeat;
+
+  text-align: center;
+}
+.partnershipPhotoBg {
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(34, 34, 34, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+hr {
+  border: none;
+  height: 0.4vh;
+  width: 100vw;
+  background-color: rgb(98, 160, 253);
+  z-index: 2;
+}
+.partnershipPhotoBg h1 {
+  color: white;
+  font-size: 10vh;
+  font-weight: 700;
+}
+.Wsp_belt {
+  width: 100vw;
+  height: 130vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--szary1);
+}
+
+.Wsp_LP {
+  width: 100vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--szary2);
+  box-shadow: 0px 0px 1vh 0px rgba(0, 0, 0, 0.75);
+}
+.Wsp_LP > p {
+  color: white;
+  font-size: 2.2vh;
+  line-height: 3.5vh;
+  font-weight: 300;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  padding: 0 5vw;
+  text-align: justify;
+}
+
+.Wsp_LP > p > span {
+  font-size: 3.5vh;
+  color: #5583bd;
+}
+
+.Wspolpraca > h2 {
+  color: white;
+  font-size: 5vh;
+  font-weight: 700;
+  margin-bottom: 8vh;
+  margin-top: 8vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.dane_kontaktowe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 100%;
+
+  font-family: "Rubik", sans-serif;
+}
+
+.dane_kontaktowe > h1 {
+  font-size: 4vh;
+  margin: 3vh 0;
+}
+
+.dane_kontaktowe > p > input {
+  width: 35vw;
+  height: 3.5vh;
+  border-radius: 0.5vh;
+  padding-left: 1vw;
+  font-size: 2vh;
+  border: none;
+  font-family: "Rubik", sans-serif;
+  margin: 2.5vh 0;
+}
+.dane_kontaktowe > p {
+  font-size: 3vh;
+  padding-left: 1vw;
+  color: white;
+}
+.dane_kontaktowe > p > textarea {
+  width: 34vw;
+  font-family: "Rubik", sans-serif;
+  height: 14vh;
+  border-radius: 1vh;
+  padding: 1vw;
+  font-size: 2vh;
+  border: none;
+  text-align: justify;
+  resize: none;
+  margin: 1vh 0;
+}
+
+.dane_kontaktowe > button {
+  width: 36vw;
+  height: 8vh;
+  border-radius: 2vh;
+  background-color: #fff #5583bd;
+  border: none;
+  color: #5583bd;
+  font-size: 3vh;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Rubik", sans-serif;
+  margin-left: 1vw;
+  transition: 0.3s;
+  margin-top: 6.5vh;
+  margin-bottom: 5vh;
+}
+.dane_kontaktowe > button:hover {
+  transform: scale(0.95);
+}
+.Wsp_partners {
+  width: 70vw;
+  min-height: 85vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+
+  padding-bottom: 15vh;
+}
+
+.Wsp_sponsor,
+.bam {
+  transition: 300ms;
+  cursor: pointer;
+
+  width: 20vw;
+  height: 20vh;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.bam:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 2px #ffffff);
+}
+.bam {
+  flex-direction: column;
+}
+
+.Wsp_sponsor > img {
+  height: 100%;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  filter: drop-shadow(0 0 2px #ffffff);
+}
+
+/* ------------------------------------------ */
+
+.slaskie {
+  background-image: url(../img/sponsorzy/spons1.png);
+}
+.extral {
+  background-image: url(../img/sponsorzy/spons2.png);
+}
+.ipkm {
+  background-image: url(../img/sponsorzy/spons3.png);
+}
+.ifm {
+  background-image: url(../img/sponsorzy/spons4.png);
+}
+.solidexpert {
+  background-image: url(../img/sponsorzy/spons5.png);
+}
+.connexion {
+  background-image: url(../img/sponsorzy/spons6.png);
+}
+.obrum {
+  background-image: url(../img/sponsorzy/spons7.png);
+}
+.igus {
+  background-image: url(../img/sponsorzy/spons8.png);
+}
+.dabi {
+  background-image: url(../img/sponsorzy/spons9.png);
+}
+.kono {
+  background-image: url(../img/sponsorzy/spons10.png);
+}
+.bmz {
+  background-image: url(../img/sponsorzy/spons11.png);
+}
+.anga {
+  background-image: url(../img/sponsorzy/spons12.png);
+}
+.altium {
+  background-image: url(../img/sponsorzy/spons13.png);
+}
+.aiut {
+  background-image: url(../img/sponsorzy/spons14.png);
+}
+.wielton {
+  background-image: url(../img/sponsorzy/spons15.png);
+}
+.mashinada {
+  background-image: url(../img/sponsorzy/spons16.png);
+}
+.devildesign {
+  background-image: url(../img/sponsorzy/spons17.png);
+}
+.botland {
+  background-image: url(../img/sponsorzy/spons18.png);
+}
+.pgosa {
+  background-image: url(../img/sponsorzy/spons19.png);
+}

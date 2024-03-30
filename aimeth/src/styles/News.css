@@ -1,0 +1,315 @@
+.news {
+  width: 100vw;
+  background-color: var(--szary2);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: 0vh 0vh 3vh 0vh rgb(0, 0, 0);
+}
+.newsHeader {
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0vh 0vh 4vh -1vh rgb(0, 0, 0);
+
+  z-index: 3;
+}
+.newsHeader > h1 {
+  font-size: 3rem;
+  font-weight: 500;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsHeader > h1 > hr {
+  margin-top: 0.5vh;
+  width: 18vw;
+  background-color: var(--blue3);
+  border: none;
+  height: 0.2vh;
+}
+.newsContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  background-image: url(https://pboslask.com.pl/wp-content/uploads/2019/05/centrum_nowych_technologii_politechnika_slaska-1-1000x570.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  z-index: 0;
+  padding: 0vw 0vw;
+}
+
+.newsContainerBg {
+  height: 100vh;
+  width: 90vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 5vw;
+  z-index: 1;
+}
+.news_lp {
+  width: 68vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.lpContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 83vh;
+  width: 35vw;
+  border-radius: 1vh;
+
+  padding: 3vh 2vh;
+  box-shadow: 0vh 0vh 1vh 0vh rgb(20, 20, 20);
+
+  background-color: var(--szary3);
+
+  transition: 0.5s;
+}
+.lpContainer:hover {
+  transform: scale(0.995);
+}
+.lpContainer > h1 {
+  font-size: 3.5vh;
+  line-height: 4vh;
+  height: 4vh;
+  padding: 1vh;
+}
+.facebookIcon {
+  font-size: 4vh;
+  height: 4vh;
+}
+.lpContainer > h2 {
+  font-size: 2.5vh;
+  line-height: 3.5vh;
+  height: 7vh;
+  width: 50vh;
+  text-align: center;
+  padding: 1.5vh;
+}
+.lp_tytul {
+  max-height: 16vh;
+  max-width: 42vw;
+  text-align: justify;
+  font-size: 1.9vh;
+  text-overflow: ellipsis;
+  line-height: 3.8vh;
+  overflow: hidden;
+  padding: 1vh 3vh;
+  box-sizing: border-box;
+  border-radius: 1vh;
+  display: -webkit-box;
+
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.lp_obrazek {
+  height: 38vh;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vh;
+  background-size: 100% auto;
+  background-position: 0 20%;
+}
+.lp_obrazek > a > img {
+  height: 40vh;
+  border-radius: 1vw;
+}
+
+.lp_obrazekPic {
+  width: 32vw;
+  height: 35vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 1vh;
+
+  transition: 0.5s;
+}
+
+.lp_obrazekPic:hover {
+  cursor: pointer;
+  transform: scale(0.995);
+}
+.lpMoreContainer {
+  padding-top: 1vh;
+  display: flex;
+  height: 7vh;
+  width: 35vw;
+  align-items: center;
+  justify-content: left;
+  margin-left: 4vh;
+}
+
+.lpMore {
+  font-size: 1rem;
+  background-color: var(--blue3);
+  padding: 0.5vh;
+  border-radius: 0.2vh;
+  position: relative;
+  left: 0vh;
+  transition: 0.5s;
+}
+.lpMore:hover {
+  cursor: pointer;
+  left: -1vh;
+}
+.lpDate {
+  position: relative;
+  left: 2vh;
+
+  font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue3);
+}
+.lpDate > span {
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  left: 0.5vh;
+}
+.news_pp {
+  width: 32vw;
+  height: 80vh;
+  /* background-color: var(--szary2); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 2vw;
+}
+
+.news_pp > h1 {
+  font-size: 3em;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 0 0.3vh black;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 2vh;
+}
+.data_pasek {
+  width: 30vw;
+  height: 8vh;
+  background-color: var(--szary3);
+  padding: 1vh;
+  display: flex;
+  border-radius: 2vh;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.4s;
+  box-shadow: 0vh 0vh 3vh 0vh rgb(0, 0, 0);
+}
+
+.data {
+  min-width: 6vh;
+  height: 6vh;
+  width: 6vh;
+  padding: 0.5vh;
+
+  background-color: var(--blue3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2vh;
+  font-weight: 500;
+  color: white;
+
+  border-radius: 1.5vh;
+
+  margin-right: 0.5vh;
+  margin-left: 0.5vh;
+
+  position: relative;
+  top: 0vh;
+  transition: 0.4s;
+}
+.data_tekst {
+  width: 90%;
+  height: 10vh;
+  margin-left: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+
+  transition: 0.4s;
+}
+.data_tekst > h1 {
+  position: relative;
+  top: 0.5vh;
+  font-size: 1.2rem;
+  min-height: 4vh;
+  white-space: nowrap;
+  color: var(--blue4);
+  transition: 0.4s;
+}
+
+.opisContainer > p {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  height: 3vh;
+  line-height: 3vh;
+  position: relative;
+  top: 0vh;
+  width: fit-content;
+  min-width: 15vw;
+  transition: transform 4s linear, height 0.4s;
+
+  overflow: hidden;
+}
+
+/* .data_pasek:hover {
+  height: 15vh;
+
+  cursor: pointer;
+}
+.data_pasek:hover > .data_tekst {
+  height: 15vh;
+}
+.data_pasek:hover > .data_tekst > .opisContainer > p {
+  height: 9vh;
+} */
+
+.news_lp > iframe {
+  overflow: scroll;
+  border: none;
+  width: 27vw;
+  height: 75vh;
+  border-radius: 1vw;
+  margin: 0 2vw;
+  cursor: pointer;
+  padding: 2vh;
+  background-color: var(--blue1);
+}

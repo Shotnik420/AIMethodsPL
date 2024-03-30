@@ -1,0 +1,55 @@
+.aboutUsMini {
+  height: 160vh;
+  width: 100vw;
+  background-color: #292929;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutUsMini > h1 {
+  font-size: 5rem;
+  margin: 0vh 0 5vh 0;
+}
+
+.aboutBelt {
+  width: 90vw;
+  height: 40vh;
+  transition: 300ms;
+  margin: 2vh 0;
+  display: flex;
+}
+
+.aboutBelt:hover {
+  transform: scale(1.02);
+}
+
+.aboutImg {
+  height: 100%;
+  width: 30vw;
+
+  overflow: hidden;
+}
+
+.aboutText {
+  width: 60vw;
+  height: 100%;
+  background-color: var(--szary1);
+  display: flex;
+  align-items: center;
+}
+
+.aboutText > p {
+  margin: 0 3vw;
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 2.5rem;
+}
+.aboutImg > img {
+  height: 50vh;
+  width: 40vw;
+  object-fit: cover;
+  margin-left: -3vw;
+}

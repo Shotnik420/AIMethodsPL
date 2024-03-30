@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "konkurs": "Konkurs 1",
+    "miejsce": "1",
+    "date": "2023"
+  },
+  {
+    "id": 2,
+    "konkurs": "Konkurs 2",
+    "miejsce": "21",
+    "date": "2023"
+  },
+  {
+    "id": 3,
+    "konkurs": "Konkurs 3",
+    "miejsce": "2",
+    "date": "2024"
+  },
+  {
+    "id": 4,
+    "konkurs": "Najlepsze burgery w CNT",
+    "miejsce": "1",
+    "date": ""
+  }
+]

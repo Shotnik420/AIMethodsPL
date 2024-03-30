@@ -1,0 +1,205 @@
+{
+  "obecny1": [
+    {
+      "id": 1,
+      "imie": "Vip i super typ",
+      "tytul": "Farosz i naczelnik",
+      "zdj": "file-1703953088861.jpg",
+      "isEditing": false
+    },
+    {
+      "id": 2,
+      "imie": "Julia Nowak",
+      "tytul": "Członek Zarządu",
+      "zdj": "file-1703953088865.jpg",
+      "isEditing": false
+    },
+    {
+      "id": 3,
+      "imie": "Jakub Gurgul",
+      "tytul": "Członek Zarządu",
+      "zdj": "file-1703953088868.png",
+      "isEditing": false
+    }
+  ],
+  "obecny2": [
+    {
+      "id": 4,
+      "imie": "Dawid Szkolc",
+      "tytul": "Członek Zarządu",
+      "zdj": "file-1703953144363.jpg",
+      "isEditing": false
+    },
+    {
+      "id": 5,
+      "imie": "Radosław Kępa",
+      "tytul": "Członek Zarządu",
+      "zdj": "file-1703953144368.jpg",
+      "isEditing": false
+    }
+  ],
+  "opiekunowie1": [
+    {
+      "id": 6,
+      "imie": "Prof dr. hab Wojciech Moczulski",
+      "tytul": "",
+      "zdj": "file-1704232649066.jpg",
+      "isEditing": false
+    },
+    {
+      "id": 7,
+      "imie": "Dr hab. inż. Piotr Przystałka, prof. PŚ",
+      "tytul": "",
+      "zdj": "file-1704232797527.jpg",
+      "isEditing": false
+    },
+    {
+      "id": 8,
+      "zdj": "file-1704232797532.jpg",
+      "imie": "Dr inż. Wawrzyniec Panfil",
+      "isEditing": false,
+      "tytul": ""
+    }
+  ],
+  "opiekunowie2": [
+    {
+      "id": 9,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Dr inż. Małgorzata Muzalewska",
+      "isEditing": false,
+      "tytul": ""
+    },
+    {
+      "id": 10,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Mgr inż. Andrzej Jałowiecki",
+      "isEditing": false,
+      "tytul": ""
+    }
+  ],
+  "stary_zarzad_2023": [
+    {
+      "id": 11,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Michał Kobielski",
+      "tytul": "Prezes",
+      "isEditing": false
+    },
+    {
+      "id": 12,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Julia Nowak",
+      "tytul": "Wiceprezes",
+      "isEditing": false
+    },
+    {
+      "id": 13,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Jakub Bręczewski",
+      "tytul": "Wiceprezes",
+      "isEditing": false
+    }
+  ],
+  "stary_zarzad_2022": [
+    {
+      "id": 14,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Dawid Szkolc",
+      "tytul": "Prezes",
+      "isEditing": false
+    },
+    {
+      "id": 15,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Radosław Kępa",
+      "tytul": "Wiceprezes",
+      "isEditing": false
+    },
+    {
+      "id": 16,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Jakub Bręczewski",
+      "tytul": "Wiceprezes",
+      "isEditing": false
+    }
+  ],
+  "stary_zarzad_2021": [
+    {
+      "id": 17,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Igor Puchała",
+      "tytul": "Prezes",
+      "isEditing": false
+    },
+    {
+      "id": 18,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Michał Kobielski",
+      "tytul": "Wiceprezes",
+      "isEditing": false
+    },
+    {
+      "id": 19,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Jakub Bręczewski",
+      "tytul": "Wiceprezes",
+      "isEditing": false
+    }
+  ],
+  "stary_zarzad_2020": [
+    {
+      "id": 20,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Igor Puchała",
+      "tytul": "Prezes",
+      "isEditing": false
+    },
+    {
+      "id": 21,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Wojciech Pyka",
+      "tytul": "Wiceprezes",
+      "isEditing": false
+    },
+    null
+  ],
+  "stary_zarzad_2019": [
+    {
+      "id": 23,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Tomasz Walczek",
+      "tytul": "Prezes",
+      "isEditing": false
+    },
+    {
+      "id": 24,
+      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "imie": "Maciej Cholewa",
+      "tytul": "Wiceprezes",
+      "isEditing": false
+    }
+  ],
+  "stary_zarzad_2018": [
+    {
+      "id": 25,
+      "zdj": "file-1711219374692.jpg",
+      "imie": "Mariusz Lenczyk",
+      "tytul": "Prezes",
+      "isEditing": false
+    },
+    {
+      "id": 26,
+      "zdj": "file-1704232771666.jpg",
+      "imie": "Agnieszka Cichońska",
+      "tytul": "Wiceprezes",
+      "isEditing": false
+    },
+    {
+      "id": 27,
+      "zdj": "file-1711219374695.png",
+      "imie": "Kamil Bugdoł",
+      "tytul": "Wiceprezes",
+      "isEditing": false
+    }
+  ]
+}

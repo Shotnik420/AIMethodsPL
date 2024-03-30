@@ -1,0 +1,150 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.Navbar {
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  background-color: #1b1b1b9f;
+  /* background-color: #266abb6e; */
+
+  font-weight: 300;
+  color: white;
+  position: fixed;
+  top: 0;
+
+  transition: 500ms;
+}
+
+.navbarTest {
+  transition: 0.5s;
+}
+.rozwijane {
+  /* visibility: hidden; */
+  top: 8vh;
+  left: 35vw;
+  padding-right: 5vh;
+  height: 0vh;
+  background-color: rgba(0, 0, 0, 0.685);
+  /* background-color: #266abb6e; */
+
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  overflow: hidden;
+}
+.rozwijane > a {
+  width: 100%;
+  height: 20%;
+}
+.rozwijaneObject {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 300ms;
+}
+.rozwijaneObject:hover {
+  color: #7f4ef1;
+  transform: scale(1.05);
+}
+.rozwijaneObject > svg {
+  font-size: 2vh;
+  padding-right: 0.5vw;
+  padding-left: 2vw;
+}
+.logo {
+  height: 8vh;
+  width: 20vw;
+  margin-left: 2vw;
+  margin-right: auto;
+  background-size: 100% 100%;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo > img {
+  height: 5vh;
+  padding-right: 1.5vw;
+}
+
+.logoName {
+  font-weight: 500;
+  font-size: 2.5vh;
+}
+
+.navObjects {
+  width: 80vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  text-align: center;
+}
+.navObject {
+  height: 10vh;
+  width: 11vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 200ms;
+  border-width: 0;
+}
+.navObject:hover {
+  color: var(--blue2);
+  transform: scale(1.05);
+}
+
+.project {
+  font-weight: bold;
+}
+.project > svg {
+  font-size: 3vh;
+  padding-right: 0.5vw;
+}
+
+.contact {
+  margin-right: 2vw;
+}
+
+.darkmode_slider {
+  width: 5vw;
+  height: 4vh;
+
+  margin-right: 4vw;
+  background-color: var(--szary2);
+  border-radius: 3vh;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+.darkmode_slider > svg {
+  margin-left: 0.5vw;
+  font-size: 3vh;
+}
+.kolko {
+  transition: 0.3s;
+  background-color: var(--blue3);
+  width: 4vh;
+  height: 4vh;
+  border-radius: 50%;
+  margin-left: 60%;
+}
+.kolko:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

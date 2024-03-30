@@ -1,0 +1,261 @@
+:root {
+  --pageColor: #2d3e53;
+}
+
+.aboutUs {
+  color: rgb(228, 228, 228);
+}
+
+.background {
+  height: 55vh;
+  width: 100vw;
+  background-image: url(https://pboslask.com.pl/wp-content/uploads/2019/05/centrum_nowych_technologii_politechnika_slaska-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0vh -50vh;
+}
+.backgroundText {
+  font-size: 8vh;
+  font-weight: 600;
+
+  color: white;
+
+  height: 55vh;
+  width: 100vw;
+
+  background-color: rgba(34, 34, 34, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topLine {
+  height: 0.3vh;
+  background-color: rgb(98, 160, 253);
+  border: none;
+}
+.introduction {
+  height: 50vh;
+  width: 100vw;
+
+  background-color: rgb(27, 27, 27);
+
+  display: flex;
+}
+.verticalText {
+  height: 100%;
+  width: 10vw;
+
+  /* background-color: rgba(255, 255, 255, 0.829); */
+
+  font-size: 2.3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+.verticalLine {
+  height: 100%;
+  width: 0.1vw;
+
+  background-color: rgb(255, 255, 255);
+}
+
+.introductionText {
+  width: 89.9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introductionText > p {
+  width: 60vw;
+  text-align: justify;
+  font-size: 2.3vh;
+}
+
+.mainPhotoContainer {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  background-image: url(https://pboslask.com.pl/wp-content/uploads/2019/05/centrum_nowych_technologii_politechnika_slaska-1-1000x570.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -20vh;
+}
+
+.mainPhotoContainer > .verticalText {
+  background-color: rgba(34, 34, 34, 0.685);
+}
+.mPContainer {
+  height: 80vh;
+  width: 89.9vw;
+  background-color: rgba(34, 34, 34, 0.685);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainPhoto {
+  height: 70vh;
+  width: 80vw;
+
+  background-image: url(https://sknaimeth.polsl.pl/wp-content/uploads/2017/03/KołoAll.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  border-radius: 0.5vh;
+
+  -webkit-box-shadow: 0px 0px 2vh 0px rgb(0, 0, 0);
+  -moz-box-shadow: 0px 0px 2vh 0px rgb(0, 0, 0);
+  box-shadow: 0px 0px 2vh 0px rgb(0, 0, 0);
+}
+
+
+.management {
+  min-height: 350vh;
+  width: 100vw;
+
+  background-color: rgb(27, 27, 27);
+  padding-bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.managementText {
+  font-size: 4vh;
+  margin-top: 10vh;
+}
+
+.managementText--1 {
+  color: white;
+}
+.managementText--2 {
+  font-size: 2.5vh;
+  margin-top: 2vh;
+}
+.managementText--2 > a {
+  color: rgb(98, 160, 253);
+}
+
+.managementRow {
+  margin-top: 5vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  height: 50vh;
+  width: 80vw;
+}
+
+.managementTile {
+  width: 90vw;
+  height: 0vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: 0.5s;
+}
+/* ------------------------------------------------------------------------ */
+
+.tile {
+  height: 50vh;
+  width: 40vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.osobaPhoto {
+  height: 35vh;
+  width: 30vh;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.osobaId {
+  height: 5vh;
+  font-weight: 600;
+  font-size: 2vh;
+
+  line-height: 5vh;
+}
+
+.osobaLine {
+  width: 30%;
+  height: 0.1vh;
+
+  background-color: rgb(255, 255, 255);
+}
+
+.osobaPosition {
+  height: 5vh;
+  line-height: 5vh;
+
+  color: white;
+  font-size: 1.6vh;
+}
+
+.tutors {
+  font-size: 4vh;
+  margin-top: 10vh;
+
+  color: white;
+}
+.pastManagement{
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pastManagementButtons{
+  width: 10vw;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pastManagementTiles{
+  width: 80vw;
+  position: relative;
+  left: -10vh;
+}
+.management > hr{
+  width: 100vw;
+}
+.managementBtn{
+  width: 10vw;
+  height: 7vh;
+
+ 
+  border-radius: 0.5vh;
+
+  font-size: 2vh;
+
+  background-color: var(--blue3);
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
