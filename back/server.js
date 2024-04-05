@@ -33,7 +33,7 @@ initialize(
 
 app.use(
   cors({
-    origin: "http://89.73.160.85:8080",
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );

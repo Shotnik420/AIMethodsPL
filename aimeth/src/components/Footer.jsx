@@ -143,12 +143,15 @@ function Footer(props) {
               action="http://localhost:3300/logout?_method=DELETE"
               method="POST"
             >
-              <button type="submit">Log Out</button>
+              <h1 id="loginbut">WYLOGUJ</h1>
             </form>
           ) : (
-            <Link to={"/login"}>
-              <h1>ZALOGUj</h1>
-            </Link>
+            <>
+              <br />
+              <Link to={"/login"}>
+                <h1 id="loginbut">ZALOGUJ</h1>
+              </Link>
+            </>
           )}
         </article>
       </section>

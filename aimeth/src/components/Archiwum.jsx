@@ -9,10 +9,11 @@ import Micromouse from "../archiwum/MicroMouse";
 import LF from "../archiwum/LF";
 import Explorer from "../archiwum/Explorer";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { Tilt } from 'react-tilt';
+import { Tilt } from "react-tilt";
 
 import { motion } from "framer-motion";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import SumoImg from "../img/Sumo.png";
 import LFImg from "../img/lf1.jpg";
 import MTRImg from "../img/mtr3_1.jpg";
@@ -34,7 +35,6 @@ const defaultOptions = {
   reset: true, // If the tilt effect has to be reset on exit.
   easing: "linear", // Easing on enter/exit.
 };
-
 
 function PopUp(props) {
   useEffect(() => {
@@ -79,15 +79,15 @@ export default function Archiwum() {
       <h1>Archiwum</h1>
       <p>Zobacz nasze poprzednie projekty</p>
       <div className="projektyGrid">
-        <Tilt className="projektdiv"  options={defaultOptions}>
+        <Tilt className="projektdiv" options={defaultOptions}>
           <div
             className="projekt"
             onClick={() => {
               setKontent(<ISD />);
               setPopup(true);
             }}
-            style={{ backgroundImage: "url(" + isdObraz + ")" }}
           >
+            <LazyLoadImage src={isdObraz} alt="ISD" effect="blur" />
             <div className="projekt_tekst">
               <p>Inteligentne systemy diagnostyczne</p>
             </div>
@@ -100,8 +100,8 @@ export default function Archiwum() {
               setKontent(<Sumo />);
               setPopup(true);
             }}
-            style={{ backgroundImage: "url(" + SumoImg + ")" }}
           >
+            <LazyLoadImage src={SumoImg} alt="Sumo" effect="blur" />
             <div className="projekt_tekst">
               <p>Roboty Sumo</p>
             </div>
@@ -114,8 +114,8 @@ export default function Archiwum() {
               setKontent(<MTR />);
               setPopup(true);
             }}
-            style={{ backgroundImage: "url(" + MTRImg + ")" }}
           >
+            <LazyLoadImage src={MTRImg} alt="MTR" effect="blur" />
             <div className="projekt_tekst">
               <p>MTR – Multitasking Tracked Robot</p>
             </div>
@@ -128,8 +128,8 @@ export default function Archiwum() {
               setKontent(<SSL />);
               setPopup(true);
             }}
-            style={{ backgroundImage: "url(" + SSLImg + ")" }}
           >
+            <LazyLoadImage src={SSLImg} alt="SSL" effect="blur" />
             <div className="projekt_tekst">
               <p>Small Size League</p>
             </div>
@@ -142,8 +142,8 @@ export default function Archiwum() {
               setKontent(<Explorer />);
               setPopup(true);
             }}
-            style={{ backgroundImage: "url(" + ExplorerImg + ")" }}
           >
+            <LazyLoadImage src={ExplorerImg} alt="Explorer" effect="blur" />
             <div className="projekt_tekst">
               <p>Explorer6WD</p>
             </div>
@@ -156,8 +156,8 @@ export default function Archiwum() {
               setKontent(<Micromouse />);
               setPopup(true);
             }}
-            style={{ backgroundImage: "url(" + MicromouseImg + ")" }}
           >
+            <LazyLoadImage src={MicromouseImg} alt="Micromouse" effect="blur" />
             <div className="projekt_tekst">
               <p>Micromouse</p>
             </div>
@@ -170,8 +170,9 @@ export default function Archiwum() {
               setKontent(<LF />);
               setPopup(true);
             }}
-            style={{ backgroundImage: "url(" + LFImg + ")" }}
           >
+            <LazyLoadImage src={LFImg} alt="Linefollower" effect="blur" />
+
             <div className="projekt_tekst">
               <p>Linefollower AQUILA</p>
             </div>
@@ -184,8 +185,8 @@ export default function Archiwum() {
               setKontent(<Quadrocopter />);
               setPopup(true);
             }}
-            style={{ backgroundImage: "url(" + QuadImg + ")" }}
           >
+            <LazyLoadImage src={QuadImg} alt="Quadrocopter" effect="blur" />
             <div className="projekt_tekst">
               <p>Quadrocopter</p>
             </div>

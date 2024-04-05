@@ -21,12 +21,7 @@ export default function Login() {
       });
   }, []);
 
-  useEffect(() => {
-    if (isLoggedIn) {
-      console.log("Zalogowano");
-      navigate("/");
-    }
-  }, [isLoggedIn]);
+  useEffect(() => {}, [isLoggedIn]);
 
   function checkLoginStatus() {
     axios
@@ -50,8 +45,6 @@ export default function Login() {
       });
   }
 
-  const navigate = useNavigate();
-
   const handleLogin = async (e) => {
     e.preventDefault();
     console.log("Login:", username, password);
@@ -72,10 +65,14 @@ export default function Login() {
       };
 
       const response = await axios(config);
-      console.log(response.data);
+      if (!response.data) {
+        document.getElementById("stanlogowania").innerHTML =
+          "Login lub hasło jest błędne.";
+      }
       setIsLoggedIn(response.data);
     } catch (error) {
-      console.error("Login failed:", error.response);
+      document.getElementById("stanlogowania").innerHTML =
+        "Błąd systemu logowania.";
       // Obsługa błędu logowania
     }
   };
@@ -90,7 +87,6 @@ export default function Login() {
       <div className="loginContainer">
         <div className="loginHeader">
           <h1>Logowanie</h1>
-          <h1>{isLoggedIn}</h1>
         </div>
         <form onSubmit={handleLogin} method="post">
           <input
@@ -112,9 +108,8 @@ export default function Login() {
           <input type="submit" value="Login" />
         </form>
       </div>
-      <form action="http://localhost:3300/logout?_method=DELETE" method="POST">
-        <button type="submit">Log Out</button>
-      </form>
+      <br />
+      <h1 id="stanlogowania">Logowanie do admina</h1>
     </motion.div>
   );
 }

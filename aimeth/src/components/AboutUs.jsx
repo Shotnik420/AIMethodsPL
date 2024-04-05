@@ -144,16 +144,21 @@ function AboutUs(props) {
             </b>
           </div>
           <div className="managementRow">
-            {posts["stary_zarzad_" + i.toString()].map((post) => (
-              <Osoba
-                key={post.id}
-                id={post.id}
-                image={post.zdj}
-                name={post.imie}
-                position={post.tytul}
-                isEditing={post.isEditing}
-              />
-            ))}
+            {posts["stary_zarzad_" + i.toString()] &&
+              posts["stary_zarzad_" + i.toString()].map((post) => {
+                if (post) {
+                  return (
+                    <Osoba
+                      key={post.id}
+                      id={post.id}
+                      image={post.zdj}
+                      name={post.imie}
+                      position={post.tytul}
+                      isEditing={post.isEditing}
+                    />
+                  );
+                }
+              })}
           </div>
         </>
       );

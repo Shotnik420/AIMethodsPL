@@ -9,3 +9,49 @@
   position: relative;
   z-index: 1;
 }
+.loginContainer {
+  width: 20vw;
+  height: 50vh;
+  background: var(--blue3);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1vh;
+  box-shadow: 0 0 1vh 0.5vh var(--szary2);
+}
+.loginContainer > form {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.loginContainer > form > input {
+  width: 100%;
+  height: 5%;
+
+  padding: 3vh 1vh;
+  border-radius: 1vh;
+  border: none;
+  background: rgb(241, 241, 241);
+  font-size: 1.5rem;
+  color: var(--blue1);
+  transition: 300ms;
+}
+
+.loginContainer > form > input:focus {
+  outline: none;
+  transform: scale(1.05);
+}
+.loginContainer > form > input[type="submit"] {
+  padding-bottom: 6vh;
+  background: var(--szary2);
+  color: white;
+  cursor: pointer;
+}
+.loginContainer > form > input[type="submit"]:hover {
+  transform: scale(1.05);
+  background: var(--szary4);
+}

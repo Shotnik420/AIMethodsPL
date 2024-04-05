@@ -38,13 +38,15 @@
 
 .projektdiv {
   transition: 0.2s;
+  height: 35vh;
+  position: relative;
 }
 
 .projektdiv:hover {
   transform: scale(0.95);
 }
 .projekt {
-  width: 100%;
+  width: 23vw;
   border-radius: 0.5vh;
   height: 100%;
   display: flex;
@@ -55,8 +57,23 @@
   background-size: 100% 71%;
   transition: 0.5s;
   cursor: pointer;
-
+  overflow: hidden;
   transform: scale(0.9);
+  position: relative;
+}
+
+.projekt > span > img {
+  width: 25vw;
+  height: 30vh;
+  position: absolute;
+  border-top-left-radius: 0.5vh;
+  border-top-right-radius: 0.5vh;
+  object-fit: cover;
+  z-index: 1;
+  margin-left: -13vw;
+  margin-top: -25vh;
+  pointer-events: none;
+  user-select: none;
 }
 
 .projekt:not(:first-child):hover {
@@ -66,6 +83,7 @@
 .projekt_tekst {
   height: 10vh;
   width: 100%;
+  z-index: 2;
   background-color: var(--szary1);
   display: flex;
   align-items: center;
@@ -73,6 +91,8 @@
   text-align: center;
   border-bottom-left-radius: 0.5vh;
   border-bottom-right-radius: 0.5vh;
+  pointer-events: none;
+  user-select: none;
 }
 
 .projekt_tekst > p {
