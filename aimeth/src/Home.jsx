@@ -17,7 +17,7 @@ function Home(props) {
     >
       <Main />
 
-      {/* <News log={props.log} /> */}
+      <News log={props.log} />
 
       <Projekty />
 
