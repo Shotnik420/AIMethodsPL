@@ -181,110 +181,78 @@ export default function News(props) {
       </div>
       <div className="newsContainer">
         <div className="newsContainerBg">
-          <div className="news_lp">
-            <div className="lpContainer">
-              <div className="facebookIcon">
-                <BsFacebook />
-              </div>
-              <h1>Najnowszy post:</h1>
-              <div className="lp_obrazek"></div>
-              <h2 id="newsTitle">{tytul}</h2>
-              <div className="lp_tytul">
-                {latestPost?.message.slice(tytul.length)}
-              </div>
-              <div className="lpMoreContainer">
-                <a
-                  target="_blank"
-                  className="lpMore"
-                  href={latestPost?.permalink_url}
-                >
-                  Zobacz więcej...
-                </a>
-                <div className="lpDate">
-                  <ImClock />{" "}
-                  <span className="put_data">
-                    {new Date(latestPost?.created_time).toLocaleDateString(
-                      "pl-PL"
-                    )}
-                  </span>
-                </div>
-              </div>
+          <div className="newsPage">
+            <MainNews
+              bgImg="https://sknaimeth.polsl.pl/wp-content/uploads/2024/03/Screenshot_20240318_181732_Gallery-594x446.jpg"
+              readTime="10 minut czytania"
+              title="Podsumowanie roku 2023 – raport roczny"
+              desc="Nadszedł czas podsumowania naszej pracy, dlatego jak co roku
+              udostępniamy nasz raport za rok 2023. W tym roku..."
+              date="21 lutego 2024"
+            />
+            <div className="newsColumn">
+              <SecondaryNews
+                bgImg="https://sknaimeth.polsl.pl/wp-content/uploads/2023/09/20230831_214025-594x446.jpg"
+                readTime="8 minut czytania"
+                title="Licealiści z projektem autonomicznego pojazdu napędzanego wodorem"
+                desc="Uczniowie Mikołaj Szumilas i Mateusz Trebuniak z III Liceum Ogólnokształcącego..."
+                date="20 marca 2024"
+              />
+              <SecondaryNews
+                bgImg="https://sknaimeth.polsl.pl/wp-content/uploads/2023/06/353644957_682761760326956_5266989271111620418_n-594x594.jpg"
+                readTime="5 minut czytania"
+                title="Projekt pt. „Autonomiczne autko” realizowany przez licealistów"
+                desc="Projekt pt. „Autonomiczne autko” realizowany przez Mikołaja i Mateusza – uczniów..."
+                date="1 września 2023"
+              />
             </div>
           </div>
-          <div className="news_pp">
-            <h1>Nadchodzące wydarzenia:</h1>
-            {isEditMode
-              ? posts.map((post, index) => (
-                  <div className="data_pasek" key={index}>
-                    <input
-                      style={{
-                        fontSize: "1rem",
-                        textAlign: "center",
-                      }}
-                      id={`dat${post.id}`}
-                      className="data"
-                      type="text"
-                      value={post.data}
-                      onChange={(e) => updatePostData(index, e.target.value)}
-                    />
-                    <div className="data_tekst">
-                      <input
-                        id={`tyt${post.id}`}
-                        className="data_tekst"
-                        type="text"
-                        value={post.name}
-                        onChange={(e) => updatePostName(index, e.target.value)}
-                      />
-                      <input
-                        id={`opi${post.id}`}
-                        className="opisContainer"
-                        type="text"
-                        value={post.opis}
-                        onChange={(e) => updatePostOpis(index, e.target.value)}
-                      />
+        </div>
+      </div>
+    </div>
+  );
+}
 
-                      <div className="deletePost">
-                        <button onClick={() => deletePost(post.id)}>X</button>
-                        <button onClick={() => movePostUp(index)}>^^^</button>
-                        <button onClick={() => movePostDown(index)}>
-                          \/\/\/
-                        </button>
-                      </div>
+function MainNews({ bgImg, readTime, title, desc, date }) {
+  return (
+    <div
+      className="mainNews"
+      style={{
+        backgroundImage: `url(
+          "${bgImg}"
+        )`,
+      }}
+    >
+      <div className="mainInfoContainer">
+        <div className="mainReadTime">{readTime}</div>
+        <div className="mainNewsTitle">{title}</div>
+        <div className="mainNewsDesc">{desc}</div>
+        <div className="mainNewsSection">
+          <div className="mainNewsDate">{date}</div>
+          <div className="mainNewsBtn">Czytaj dalej...</div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-                      <div></div>
-                    </div>
-                  </div>
-                ))
-              : posts.map((post, index) => (
-                  <div className="data_pasek" key={index}>
-                    <div className="data">{post.data}</div>
-                    <div className="data_tekst">
-                      <h1>{post.name}</h1>
-                      <div className="opisContainer">
-                        <p>{post.opis}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-
-            <div id="konsola">
-              {props.log ? (
-                <div>
-                  <button onClick={editMode}>Edytuj</button>
-                </div>
-              ) : (
-                <></>
-              )}
-              {isEditMode ? (
-                <>
-                  <button onClick={updatePost}>Zapisz</button>
-                  <button onClick={dodajNews}>Dodaj</button>
-                </>
-              ) : (
-                <></>
-              )}
-            </div>
-          </div>
+function SecondaryNews({ bgImg, readTime, title, desc, date }) {
+  return (
+    <div
+      className="secondaryNews"
+      style={{
+        backgroundImage: `url(
+        "${bgImg}"
+      )`,
+      }}
+    >
+      <div className="secondaryInfoContainer">
+        <div className="secondaryReadTime">{readTime}</div>
+        <div className="secondaryNewsTitle">{title}</div>
+        <div className="secondaryNewsDesc">{desc}</div>
+        <div className="secondaryNewsSection">
+          <div className="secondaryNewsDate">{date}</div>
+          <div className="secondaryNewsBtn">Czytaj dalej...</div>
         </div>
       </div>
     </div>
