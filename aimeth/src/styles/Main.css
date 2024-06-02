@@ -1,107 +1,169 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
 .Main {
   height: 100vh;
-  width: 100vw;
 }
-.mainLogo {
+
+.mainBackground {
   width: 100vw;
   height: 100vh;
-  /* height: 200vh; */
-  /* padding-top: 10vh; */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
-
-.mainLogo > video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.mainLogoContent {
-  padding-top: 20vh;
-  position: absolute;
+.silesianPhoenix {
   width: 100vw;
-  height: 80vh;
-  background-color: rgba(0, 0, 0, 0.678);
+  height: 100vh;
+
+  background-image: url(../img/mainBackground1.jpg);
+  background-size: cover;
+}
+.SPsection {
+  position: relative;
+  top: 15vh;
+  left: 7vw;
+  width: 27vw;
+  height: 60vh;
+
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   flex-direction: column;
+}
+
+.SPlogo {
+  position: relative;
+  left: -4vw;
+  width: 27vh;
+  height: 27vh;
+  background-image: url(../img/splogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.SPdesc {
+  width: 22vw;
+  height: 15vh;
+
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.mainBtn {
+  position: relative;
+  left: 5vw;
+
+  width: 10vw;
+  height: 5vh;
+  border-radius: 1.5vh;
+
+  cursor: pointer;
+
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 5vh;
+
+  transition: 0.5s;
+}
+.mainBtn:hover {
+  transform: scale(1.05);
+}
+.arrow {
+  position: relative;
+  top: 1vh;
+  font-size: 3vh;
+}
+.events {
+  width: 62vw;
+  height: 15vh;
+
+  position: absolute;
+  bottom: 0vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.event {
+  height: 100%;
+  width: 15vw;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.21) 41%
+  );
+
+  display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  color: aliceblue;
-}
-
-.mainLogoContent > img {
-  height: 20vh;
-}
-.mainLogoContent > h1 {
-  font-size: 6rem;
-  font-weight: 500;
-  margin-top: 2rem;
-  color: rgb(255, 255, 255);
-}
-
-.mainGoDown {
-  width: 80vw;
-  height: 30vh;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 8vh;
 }
 
-.kreska {
+.eventDate {
+  width: 90%;
+  color: var(--orange);
+  font-weight: 500;
+  font-family: "DM Mono", monospace;
+  font-size: 1.1rem;
+}
+.eventLine {
   width: 90%;
   height: 0.3vh;
-  background-color: rgb(255, 255, 255);
-  filter: drop-shadow(0 0 0.3vh rgb(255, 255, 255));
-  animation: intro 2.5s ease-in-out;
-  margin-top: 6vh;
+  background-color: white;
+  opacity: 0.7;
 }
-
-.goDown {
-  font-size: 4.5rem;
-
-  filter: drop-shadow(0 0 0.3vh rgb(255, 255, 255));
-  animation: intro2 2.5s ease-in-out;
-  transition: 300ms;
-  padding: 2vh 5vw;
+.eventType {
+  width: 90%;
+  position: absolute;
+  top: 4.7vh;
+  font-weight: 300;
+  font-family: "DM Mono", monospace;
 }
-.goDown:hover {
+.eventName {
+  width: 100%;
+  position: relative;
+  top: 1vh;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.EventContainer {
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+.left {
+  width: 80%;
+}
+.right {
+  width: 10%;
+}
+.eventBtn {
+  position: relative;
+  top: -2vh;
+
+  width: 3vh;
+  height: 3vh;
+  background-color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 3vh;
+  border-radius: 50%;
   cursor: pointer;
-  color: rgb(255, 255, 255);
-  margin-top: 3vh;
-  font-size: 4rem;
+
+  transition: 0.5s;
 }
-
-@keyframes intro {
-  0% {
-    width: 0%;
-  }
-  80% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-@keyframes intro2 {
-  0% {
-    opacity: 0;
-    margin-top: 0vh;
-  }
-  80% {
-    opacity: 0;
-    margin-top: 0vh;
-  }
-
-  100% {
-  }
+.eventBtn:hover {
+  transform: scale(1.1);
 }

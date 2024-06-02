@@ -1,119 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
 
-*{margin: 0px;}
-body{
-    /* background-color: rgb(0, 0, 0); */
-    color: white;
-    overflow-x: hidden;
-    
+* {
+  margin: 0px;
+}
+body {
+  /* background-color: rgb(0, 0, 0); */
+  color: white;
+  overflow-x: hidden;
 }
 
-.silesianParallax{
-    width: 100vw;
-    height: 350vh;
-    position: relative;
-    background-color: black;
-    
-    font-family: 'Rubik', sans-serif;
+.silesianParallax {
+  width: 100vw;
+  height: 350vh;
+  position: relative;
+  background-color: black;
+
+  font-family: "Rubik", sans-serif;
 }
-.silesianParallaxSticky{
-    width: 100vw;
-    height: 120vh;
-    background-size: 90% 100%;
-    background-position: 0vh -20vh;
-    background-repeat: no-repeat;
-    position: sticky;
-    top: 0vh;
-    bottom: 0vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.silesianParallaxSticky {
+  width: 100vw;
+  height: 120vh;
+  background-size: 90% 100%;
+  background-position: 0vh -20vh;
+  background-repeat: no-repeat;
+  position: sticky;
+  top: 0vh;
+  bottom: 0vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-canvas{
-    height: 55vh;
-    position: relative;
-    top: 10vh;
+canvas {
+  height: 55vh;
+  position: relative;
+  top: 10vh;
 }
-.canvasParallax{
-    position: absolute;
-    top: 105vh;
-    z-index: 300;
+.canvasParallax {
+  position: absolute;
+  top: 105vh;
+  z-index: 300;
 }
 
-.silesianText--1{
-    width: 30vw;
+.silesianText--1 {
+  width: 30vw;
 
-    position: relative;
-    top: 10vh;
+  position: relative;
+  top: 10vh;
 
-    text-align: center;
-    font-size: 2vh;
-    color: rgba(255, 255, 255, 0.61);       
+  text-align: center;
+  font-size: 2vh;
+  color: rgba(255, 255, 255, 0.61);
 
-    transition: 0.5s
+  transition: 0.5s;
 }
-.white{
-    color: white;
-} 
-.orange{
-    color: rgb(255, 174, 0);
+.white {
+  color: white;
 }
-.blue{
-    color: var(--blue3);
+.orange {
+  color: #ff7a00;
 }
-.silesianText--2--Text{
-    position: relative;
-    top: -28vh;
-    left: 23vh;
-    
-    width: 20vw;
-    height: 40vh;
+.blue {
+  color: var(--blue3);
+}
+.silesianText--2--Text {
+  position: relative;
+  top: -28vh;
+  left: 23vh;
 
-    text-align: justify;
-    font-size: 1.9vh;
-    color: rgba(255, 255, 255, 0.61);       
+  width: 20vw;
+  height: 40vh;
 
+  text-align: justify;
+  font-size: 1.9vh;
+  color: rgba(255, 255, 255, 0.61);
 }
-.silesianText--2--LineContainer{
-    display: flex;
-    align-items: center;
-    opacity: 0%;
-    position: relative;
-    left: 50vh;
-    top: -18vh;
-    transition: 0.5s;
+.silesianText--2--LineContainer {
+  display: flex;
+  align-items: center;
+  opacity: 0%;
+  position: relative;
+  left: 50vh;
+  top: -18vh;
+  transition: 0.5s;
 }
-.silesianText--2--Circle{
-    height: 2vh;
-    width: 2vh;
-    background-color: white;
-    border-radius: 1vh; 
+.silesianText--2--Circle {
+  height: 2vh;
+  width: 2vh;
+  background-color: white;
+  border-radius: 1vh;
 
-    position: relative;
-    top: -40vh;
-    left: 21vh;
-    transition: 0.5s;
-}
-
-.silesianText--2--Line{
-    position: relative;
-    top: -40vh;
-    left: 20vh;
-   
-    background-color: white;
-    width: 40vh;
-    height: 0.2vh;
-    border-radius:0.1vh;
-    transition: 0.5s;
+  position: relative;
+  top: -40vh;
+  left: 21vh;
+  transition: 0.5s;
 }
 
-.silesianText--3{
-    position: relative;
-    top: -35vh;
-    width: 20vw;
+.silesianText--2--Line {
+  position: relative;
+  top: -40vh;
+  left: 20vh;
 
-    transition: 0.5s;
-    opacity: 0%;
-    text-align: center;
-    font-size: 2vh;
+  background-color: white;
+  width: 40vh;
+  height: 0.2vh;
+  border-radius: 0.1vh;
+  transition: 0.5s;
+}
+
+.silesianText--3 {
+  position: relative;
+  top: -35vh;
+  width: 20vw;
+
+  transition: 0.5s;
+  opacity: 0%;
+  text-align: center;
+  font-size: 2vh;
 }
