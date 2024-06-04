@@ -6,6 +6,8 @@ const path = require("path");
 const express = require("express");
 const app = express();
 const bcrypt = require("bcrypt");
+const https = require("https");
+const http = require("http");
 const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
@@ -31,12 +33,30 @@ initialize(
   (id) => users.find((user) => user.id === id)
 );
 
+const privateKey = fs.readFileSync(
+  path.join(__dirname, "ssl", "private.key"),
+  "utf8"
+);
+const certificate = fs.readFileSync(
+  path.join(__dirname, "ssl", "certificate.crt"),
+  "utf8"
+);
+const caBundle = fs.readFileSync(
+  path.join(__dirname, "ssl", "ca_bundle.crt"),
+  "utf8"
+);
+
+const credentials = { key: privateKey, cert: certificate, ca: caBundle };
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://aimeth.netlify.app",
     credentials: true,
   })
 );
+
+app.use(express.static(path.join(__dirname, "public")));
+
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(flash());
@@ -296,4 +316,7 @@ function checkAuthenticated(req, res, next) {
   }
   res.redirect("/login");
 }
-app.listen(3300, () => console.log("Server running on port 3300!"));
+const httpsServer = https.createServer(credentials, app);
+httpsServer.listen(443, () => console.log("HTTPS Server running on port 443!"));
+const httpServer = http.createServer(app);
+httpServer.listen(80, () => console.log("HTTP Server running on port 80!"));

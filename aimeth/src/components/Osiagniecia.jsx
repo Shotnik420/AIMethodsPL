@@ -11,7 +11,7 @@ export default function Osiagniecia(props) {
 
   useEffect(() => {
     axios
-      .get("http://89.73.160.85:3300/osiagniecia")
+      .get("https://89.73.160.90/osiagniecia")
       .then((response) => {
         console.log(response.data);
         setPosts(response.data);

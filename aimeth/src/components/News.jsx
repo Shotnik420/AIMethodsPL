@@ -38,7 +38,7 @@ export default function News({ props, accentColor }) {
   const [tytul, setTytul] = useState("");
   useEffect(() => {
     axios
-      .get("http://89.73.160.85:3300/posts")
+      .get("https://89.73.160.90/posts")
       .then((response) => {
         console.log(response.data);
         setPosts(response.data);

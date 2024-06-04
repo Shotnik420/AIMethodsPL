@@ -12,7 +12,7 @@ export default function Login() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3300/check", { withCredentials: true })
+      .get("https://89.73.160.90/check", { withCredentials: true })
       .then((response) => {
         setIsLoggedIn(response.data.isAuthenticated);
       })
@@ -25,7 +25,7 @@ export default function Login() {
 
   function checkLoginStatus() {
     axios
-      .get("http://89.73.160.85:3300/check", { withCredentials: true })
+      .get("https://89.73.160.90/check", { withCredentials: true })
       .then((response) => {
         console.log(response.data.isAuthenticated);
       })
@@ -36,7 +36,7 @@ export default function Login() {
 
   function wyloguj() {
     axios
-      .get("http://89.73.160.85:3300/logout", { withCredentials: true })
+      .get("https://89.73.160.90/logout", { withCredentials: true })
       .then((response) => {
         setIsLoggedIn(response.data.isLoggedIn);
       })
@@ -56,7 +56,7 @@ export default function Login() {
 
       const config = {
         method: "post",
-        url: "http://89.73.160.85:3300/login",
+        url: "https://89.73.160.90/login",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },

@@ -10,7 +10,7 @@ export default function Router() {
 
   useEffect(() => {
     axios
-      .get("http://89.73.160.85:3300/check", { withCredentials: true })
+      .get("https://89.73.160.90/check", { withCredentials: true })
       .then((response) => {
         setLogged(response.data.isAuthenticated);
       })
