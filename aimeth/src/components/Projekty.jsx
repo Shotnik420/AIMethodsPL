@@ -16,8 +16,9 @@ import droneImg from "../img/erne.png";
 import liceumImg from "../img/pojebiemnie.png";
 
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
-export default function Projekty() {
+export default function Projekty({ accentColor }) {
   function jedyneczka(
     logo,
     tekst,
@@ -33,7 +34,11 @@ export default function Projekty() {
 
     tekst.style.transform = skala2;
   }
-
+  useEffect(() => {
+    document.getElementById(
+      "projekty"
+    ).style = `border-top: 0.5vh solid ${accentColor};`;
+  }, [accentColor]);
   return (
     <div id="projekty">
       <h1>Nasze projekty:</h1>
