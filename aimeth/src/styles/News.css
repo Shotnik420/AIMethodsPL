@@ -31,12 +31,13 @@
   align-items: center;
 }
 
-.newsHeader > h1 > hr {
+#newsLine {
+  background-color: var(--orange);
   margin-top: 0.5vh;
   width: 12vw;
-  background-color: var(--orange);
   border: none;
   height: 0.2vh;
+  transition: 0.5s;
 }
 .newsContainer {
   width: 100vw;

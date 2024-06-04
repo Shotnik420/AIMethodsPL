@@ -11,6 +11,8 @@
   justify-content: space-around;
   background-color: var(--szary4);
   transform: scale(1);
+
+  transition: 0.5s;
 }
 #projekty > h1 {
   font-size: 3rem;
@@ -75,8 +77,6 @@
   position: absolute;
   z-index: 1;
   top: 0;
-}
-.projekt_img:hover {
 }
 
 .projekt_img > img {

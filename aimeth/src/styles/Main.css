@@ -5,15 +5,67 @@
 }
 
 .mainBackground {
-  width: 100vw;
-  height: 100vh;
-}
-.silesianPhoenix {
-  width: 100vw;
+  width: 400vw;
   height: 100vh;
 
-  background-image: url(../img/mainBackground1.jpg);
+  display: flex;
+  transition: 0.5s;
+}
+.projects {
+  width: 100vw;
+  height: 100vh;
   background-size: cover;
+  transition: 0.5s;
+}
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 45vh;
+  font-size: 3vh;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 10vh;
+
+  z-index: 2;
+}
+.arrowRight {
+  right: 0;
+}
+.arrowLeft {
+  left: 0;
+}
+.arrowLeft:hover {
+  transform: scale(1.01);
+  left: -1vh;
+}
+.arrowRight:hover {
+  transform: scale(1.01);
+  right: -1vh;
+}
+.silesianPhoenix {
+  background-image: url(../img/mainBackground1.jpg);
+}
+.senso {
+  background-image: url(../img/mainBackground2.jpg);
+}
+.sensoBg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+.iso {
+  background-image: url(../img/mainBackground3.jpg);
+}
+.erno {
+  background-image: url(../img/mainBackground4.jpg);
 }
 .SPsection {
   position: relative;
@@ -78,6 +130,7 @@
   top: 1vh;
   font-size: 3vh;
 }
+
 .events {
   width: 62vw;
   height: 15vh;
@@ -97,7 +150,7 @@
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.05) 0%,
-    rgba(0, 0, 0, 0.21) 41%
+    rgba(0, 0, 0, 0.31) 21%
   );
 
   display: flex;
@@ -112,6 +165,7 @@
   font-weight: 500;
   font-family: "DM Mono", monospace;
   font-size: 1.1rem;
+  transition: 0.5s;
 }
 .eventLine {
   width: 90%;

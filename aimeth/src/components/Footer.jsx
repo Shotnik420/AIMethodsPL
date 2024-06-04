@@ -40,8 +40,6 @@ function Footer(props) {
     return () => clearInterval(sponsorsInterval);
   }, []);
 
-  useEffect(() => {}, [posts]);
-
   function sponsorsUpdate() {
     document.querySelector(".sponsors").style =
       "margin-left:" + -12 * sponsorsCurrent.current + "vw;"; // dodane .current

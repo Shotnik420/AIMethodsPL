@@ -6,7 +6,11 @@ import { useEffect, useState } from "react";
 import { BsFacebook } from "react-icons/bs";
 
 import { ImClock, ImPilcrow } from "react-icons/im";
-export default function News(props) {
+export default function News({ props, accentColor }) {
+  useEffect(() => {
+    document.getElementById("newsLine").style.backgroundColor = accentColor;
+  }, [accentColor]);
+
   const [posts, setPosts] = useState([
     {
       id: 1,
@@ -171,12 +175,13 @@ export default function News(props) {
       )
     );
   }
+
   return (
     <div className="news">
       <div className="newsHeader">
         <h1>
           Aktualności
-          <hr></hr>
+          <hr id="newsLine"></hr>
         </h1>
       </div>
       <div className="newsContainer">
