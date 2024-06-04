@@ -113,7 +113,7 @@ function AboutUs(props) {
   }
   useEffect(() => {
     axios
-      .get("http://89.73.160.85:3300/zarzad")
+      .get("https://89.73.160.90/zarzad")
       .then((response) => {
         if (response.data !== undefined) {
           setPosts(response.data);
