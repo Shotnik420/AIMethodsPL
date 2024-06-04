@@ -12,7 +12,7 @@ export default function Login() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3300/check", { withCredentials: true })
+      .get("https://89.73.160.90/check", { withCredentials: true })
       .then((response) => {
         setIsLoggedIn(response.data.isAuthenticated);
       })

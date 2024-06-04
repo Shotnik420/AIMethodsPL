@@ -57,7 +57,7 @@ export default function Wspolpraca(props) {
   ]);
   useEffect(() => {
     axios
-      .get("http://89.73.160.85:3300/sponsorzy")
+      .get("https://89.73.160.90/sponsorzy")
       .then((response) => {
         setPosts(response.data);
       })
