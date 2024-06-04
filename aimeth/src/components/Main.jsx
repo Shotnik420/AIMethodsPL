@@ -16,10 +16,11 @@ function Main({ accentColor, setAccentColor }) {
   const [currentPhoto, setCurrentPhoto] = useState(0);
   const accentColors = ["#FF7A00", "#667fbb", "#7b46ee", "#a3c83d"];
   useEffect(() => {
-    if (currentPhoto == photoCount) {
+    console.log(currentPhoto);
+    if (currentPhoto >= photoCount) {
       setCurrentPhoto(0);
-    } else if (currentPhoto == -1) {
-      setCurrentPhoto((prevPhoto) => prevPhoto - 1);
+    } else if (currentPhoto <= -1) {
+      setCurrentPhoto(photoCount - 1);
     }
     document.getElementById("carousel").style =
       "margin-left:" + -100 * currentPhoto + "vw;";
