@@ -18,38 +18,8 @@ function Navbar() {
   const { ref: navbarRef, inView: navbarVisibility } = useInView();
 
   const [projektyOut, setProjektyOut] = useState(false);
-  const [darkmode, setDarkmode] = useState(true);
 
   var test = 13;
-  useEffect(() => {
-    if (darkmode === false) {
-      document.querySelector(".darkmode_slider").style.backgroundColor =
-        "white";
-      document.querySelector(".kolko").style.marginLeft = "0";
-      document.documentElement.style.setProperty("--szary1", "#a3b1b8");
-      document.documentElement.style.setProperty("--szary2", "#3b3b3b");
-      document.documentElement.style.setProperty("--szary3", "#537294");
-      document.documentElement.style.setProperty("--szary4", "#8b8b8b");
-      document.documentElement.style.setProperty("--szary5", "#3e6b8f");
-      document.documentElement.style.setProperty("--blue1", "#dadada");
-      document.documentElement.style.setProperty("--blue2", "#303030");
-      document.documentElement.style.setProperty("--blue3", "#5583bd");
-      document.documentElement.style.setProperty("--blue4", "#303030");
-    } else {
-      document.querySelector(".darkmode_slider").style.backgroundColor =
-        "rgb(46, 46, 46)";
-      document.querySelector(".kolko").style.marginLeft = "25%";
-      document.documentElement.style.setProperty("--szary1", "#0c0c0c");
-      document.documentElement.style.setProperty("--szary2", "#292929");
-      document.documentElement.style.setProperty("--szary3", "#2b2b2c");
-      document.documentElement.style.setProperty("--szary4", "#151515");
-      document.documentElement.style.setProperty("--szary5", "#3e6b8f");
-      document.documentElement.style.setProperty("--blue1", "#266abb");
-      document.documentElement.style.setProperty("--blue2", "#88c4e4");
-      document.documentElement.style.setProperty("--blue3", "#5583bd");
-      document.documentElement.style.setProperty("--blue4", "#72a1da");
-    }
-  }, [darkmode]);
 
   return (
     <>
@@ -190,16 +160,6 @@ function Navbar() {
           <Link to="/kontakt">
             <div className="navObject contact">Kontakt</div>
           </Link>
-          <div
-            className="darkmode_slider"
-            onClick={() => {
-              setDarkmode(!darkmode);
-            }}
-          >
-            {darkmode ? <RiMoonClearLine /> : null}
-            <div className="kolko" />
-            {darkmode ? null : <RiSunFill style={{ color: "var(--blue3)" }} />}
-          </div>
         </div>
       </div>
     </>

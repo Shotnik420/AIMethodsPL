@@ -9,6 +9,20 @@ import { ImClock, ImPilcrow } from "react-icons/im";
 export default function News({ props, accentColor }) {
   useEffect(() => {
     document.getElementById("newsLine").style.backgroundColor = accentColor;
+    document.getElementsByClassName("mainNewsDate")[0].style.color =
+      accentColor;
+    document.getElementsByClassName("secondaryNewsDate")[0].style.color =
+      accentColor;
+    document.getElementsByClassName("secondaryNewsDate")[1].style.color =
+      accentColor;
+    document.getElementsByClassName("mainNewsBtn")[0].style.backgroundColor =
+      accentColor;
+    document.getElementsByClassName(
+      "secondaryNewsBtn"
+    )[0].style.backgroundColor = accentColor;
+    document.getElementsByClassName(
+      "secondaryNewsBtn"
+    )[1].style.backgroundColor = accentColor;
   }, [accentColor]);
 
   const [posts, setPosts] = useState([

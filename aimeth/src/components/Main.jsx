@@ -12,9 +12,13 @@ function Main({ accentColor, setAccentColor }) {
     let path = `/silesianphoenix`;
     navigate(path);
   };
+  //ZMIENNE
   let photoCount = 4;
   const [currentPhoto, setCurrentPhoto] = useState(0);
   const accentColors = ["#FF7A00", "#667fbb", "#7b46ee", "#a3c83d"];
+  let intervalDuration = 8000;
+  //ZMIENNE
+
   useEffect(() => {
     console.log(currentPhoto);
     if (currentPhoto >= photoCount) {
@@ -52,7 +56,7 @@ function Main({ accentColor, setAccentColor }) {
     // Start a new interval
     intervalId.current = setInterval(() => {
       setCurrentPhoto((prevPhoto) => prevPhoto + 1);
-    }, 5000);
+    }, intervalDuration);
   }
 
   return (
@@ -62,6 +66,7 @@ function Main({ accentColor, setAccentColor }) {
           className="arrowLeft"
           onClick={() => {
             setCurrentPhoto((prevPhoto) => prevPhoto - 1);
+            startInterval();
           }}
         >
           <MdOutlineKeyboardArrowLeft />

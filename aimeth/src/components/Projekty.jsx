@@ -19,21 +19,6 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function Projekty({ accentColor }) {
-  function jedyneczka(
-    logo,
-    tekst,
-    skala1,
-    skala2,
-    przesuniecie1,
-    przesuniecie2
-  ) {
-    logo.style.bottom = przesuniecie1;
-    logo.style.transform = skala1;
-
-    tekst.style.marginTop = przesuniecie2;
-
-    tekst.style.transform = skala2;
-  }
   useEffect(() => {
     document.getElementById(
       "projekty"

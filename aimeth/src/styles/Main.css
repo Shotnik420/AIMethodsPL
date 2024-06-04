@@ -14,7 +14,8 @@
 .projects {
   width: 100vw;
   height: 100vh;
-  background-size: cover;
+  background-size: 100%;
+  background-position: center;
   transition: 0.5s;
 }
 .arrowLeft,
@@ -86,6 +87,8 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+
+  backdrop-filter: blur(0.2vh);
 }
 
 .SPlogo {
@@ -102,7 +105,7 @@
   height: 15vh;
 
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 2vh;
 }
 .mainBtn {
   position: relative;
@@ -115,7 +118,7 @@
   cursor: pointer;
 
   color: white;
-  font-size: 1em;
+  font-size: 1.5vh;
   font-weight: bold;
   text-align: center;
   line-height: 5vh;
@@ -152,7 +155,7 @@
     rgba(0, 0, 0, 0.05) 0%,
     rgba(0, 0, 0, 0.31) 21%
   );
-
+  backdrop-filter: blur(0.3vh);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +167,7 @@
   color: var(--orange);
   font-weight: 500;
   font-family: "DM Mono", monospace;
-  font-size: 1.1rem;
+  font-size: 1.7vh;
   transition: 0.5s;
 }
 .eventLine {
@@ -179,13 +182,14 @@
   top: 4.7vh;
   font-weight: 300;
   font-family: "DM Mono", monospace;
+  font-size: 1.4vh;
 }
 .eventName {
   width: 100%;
   position: relative;
   top: 1vh;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.5vh;
 }
 .EventContainer {
   height: 60%;

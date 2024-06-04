@@ -131,8 +131,9 @@
 .mainNewsDate {
   color: var(--orange);
   font-size: 2vh;
-  font-weight: 500;
+  font-weight: 400;
   font-family: "DM Mono", monospace;
+  transition: 0.5s;
 }
 .mainNewsBtn {
   width: 8vw;
@@ -140,7 +141,7 @@
   border-radius: 0.7vh;
 
   color: white;
-  font-size: 1em;
+  font-size: 1.7vh;
   font-weight: bold;
   text-align: center;
   line-height: 3.5vh;
@@ -150,7 +151,7 @@
   transition: 0.5s;
 }
 .mainNewsBtn:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
   opacity: 1;
 }
 .newsColumn {
@@ -225,6 +226,8 @@
   font-weight: 400;
   font-family: "DM Mono", monospace;
   margin-bottom: 1vh;
+
+  transition: 0.5s;
 }
 .secondaryNewsBtn {
   width: 5vw;
@@ -243,4 +246,9 @@
 
   position: relative;
   top: -0.7vh;
+}
+
+.secondaryNewsBtn:hover {
+  transform: scale(1.05);
+  opacity: 1;
 }
