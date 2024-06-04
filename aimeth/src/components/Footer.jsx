@@ -21,7 +21,7 @@ function Footer(props) {
 
   useEffect(() => {
     axios
-      .get("http://89.73.160.85:3300/sponsorzy")
+      .get("https://89.73.160.90/sponsorzy")
       .then((response) => {
         setPosts(response.data);
         liczbaSponsorow = response.data.length - 3;
@@ -138,7 +138,7 @@ function Footer(props) {
           {"          "}
           {props.log ? (
             <form
-              action="http://localhost:3300/logout?_method=DELETE"
+              action="https://89.73.160.90/logout?_method=DELETE"
               method="POST"
             >
               <h1 id="loginbut">WYLOGUJ</h1>
