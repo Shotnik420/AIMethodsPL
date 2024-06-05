@@ -12,7 +12,7 @@ export default function Login() {
 
   useEffect(() => {
     axios
-      .get("https://89.73.160.90/check", { withCredentials: true })
+      .get("http://89.73.160.90/check", { withCredentials: true })
       .then((response) => {
         setIsLoggedIn(response.data.isAuthenticated);
       })
@@ -25,7 +25,7 @@ export default function Login() {
 
   function checkLoginStatus() {
     axios
-      .get("https://89.73.160.90/check", { withCredentials: true })
+      .get("http://89.73.160.90/check", { withCredentials: true })
       .then((response) => {
         console.log(response.data.isAuthenticated);
       })
@@ -36,7 +36,7 @@ export default function Login() {
 
   function wyloguj() {
     axios
-      .get("https://89.73.160.90/logout", { withCredentials: true })
+      .get("http://89.73.160.90/logout", { withCredentials: true })
       .then((response) => {
         setIsLoggedIn(response.data.isLoggedIn);
       })
@@ -56,7 +56,7 @@ export default function Login() {
 
       const config = {
         method: "post",
-        url: "https://89.73.160.90/login",
+        url: "http://89.73.160.90/login",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
@@ -64,17 +64,46 @@ export default function Login() {
         withCredentials: true,
       };
 
+      console.log("balls");
       const response = await axios(config);
+
       if (!response.data) {
         document.getElementById("stanlogowania").innerHTML =
           "Login lub hasło jest błędne.";
       }
       setIsLoggedIn(response.data);
+      print(response.data);
     } catch (error) {
       document.getElementById("stanlogowania").innerHTML =
         "Błąd systemu logowania.";
       // Obsługa błędu logowania
     }
+  };
+  const startPolling = () => {
+    const interval = setInterval(async () => {
+      try {
+        const response = await axios.get("http://89.73.160.90/pass", {
+          withCredentials: true,
+        });
+        if (response.data === true) {
+          setIsLoggedIn(true);
+          setLoginStatus("Logged in successfully.");
+          clearInterval(interval);
+        } else {
+          const failResponse = await axios.get("http://89.73.160.90/fail", {
+            withCredentials: true,
+          });
+          if (failResponse.data === false) {
+            setLoginStatus("Login failed.");
+            clearInterval(interval);
+          }
+        }
+      } catch (error) {
+        console.error("Error during polling:", error);
+        setLoginStatus("Polling error.");
+        clearInterval(interval);
+      }
+    }, 1000); // Poll every 1 second
   };
 
   return (

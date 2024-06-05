@@ -123,16 +123,18 @@ app.get("/check", (req, res) => {
   res.json({ isAuthenticated: req.isAuthenticated() });
 });
 app.get("/fail", (req, res) => {
+  console.log("fail");
   res.send(false);
 });
 app.get("/pass", (req, res) => {
+  console.log("true");
   res.send(true);
 });
 app.get("/ch", (req, res) => {
   res.json(req.session);
 });
 app.get("/login", checkNotAuthenticated, (req, res) => {
-  res.redirect("/login");
+  res.send("Login page");
 });
 
 app.post(
@@ -149,7 +151,6 @@ app.delete("/logout", (req, res) => {
     if (err) {
       return next(err);
     }
-    res.redirect("/");
   });
 });
 
