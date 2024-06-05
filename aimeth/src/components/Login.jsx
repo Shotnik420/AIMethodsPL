@@ -12,7 +12,7 @@ export default function Login() {
 
   useEffect(() => {
     axios
-      .get("http://89.73.160.90/check", { withCredentials: true })
+      .get("https://89.73.160.90/check", { withCredentials: true })
       .then((response) => {
         setIsLoggedIn(response.data.isAuthenticated);
       })
@@ -25,7 +25,7 @@ export default function Login() {
 
   function checkLoginStatus() {
     axios
-      .get("http://89.73.160.90/check", { withCredentials: true })
+      .get("https://89.73.160.90/check", { withCredentials: true })
       .then((response) => {
         console.log(response.data.isAuthenticated);
       })
@@ -36,7 +36,7 @@ export default function Login() {
 
   function wyloguj() {
     axios
-      .get("http://89.73.160.90/logout", { withCredentials: true })
+      .get("https://89.73.160.90/logout", { withCredentials: true })
       .then((response) => {
         setIsLoggedIn(response.data.isLoggedIn);
       })
@@ -56,7 +56,7 @@ export default function Login() {
 
       const config = {
         method: "post",
-        url: "http://89.73.160.90/login",
+        url: "https://89.73.160.90/login",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
@@ -64,9 +64,9 @@ export default function Login() {
         withCredentials: true,
       };
 
-      console.log("balls");
       const response = await axios(config);
-
+      console.log(response);
+      console.log(response.data);
       if (!response.data) {
         document.getElementById("stanlogowania").innerHTML =
           "Login lub hasło jest błędne.";
@@ -82,7 +82,7 @@ export default function Login() {
   const startPolling = () => {
     const interval = setInterval(async () => {
       try {
-        const response = await axios.get("http://89.73.160.90/pass", {
+        const response = await axios.get("https://89.73.160.90/pass", {
           withCredentials: true,
         });
         if (response.data === true) {
@@ -90,7 +90,7 @@ export default function Login() {
           setLoginStatus("Logged in successfully.");
           clearInterval(interval);
         } else {
-          const failResponse = await axios.get("http://89.73.160.90/fail", {
+          const failResponse = await axios.get("https://89.73.160.90/fail", {
             withCredentials: true,
           });
           if (failResponse.data === false) {
