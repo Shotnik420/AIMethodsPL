@@ -142,7 +142,7 @@ export default function Wspolpraca(props) {
 
         try {
           const response = await axios.post(
-            "http://89.73.160.85:3300/upload",
+            "https://89.73.160.85:3300/upload",
             formData,
             {
               headers: {
@@ -178,7 +178,7 @@ export default function Wspolpraca(props) {
   async function updatePost(updates) {
     try {
       const response = await axios.put(
-        "http://89.73.160.85:3300/sponsorzy",
+        "https://89.73.160.85:3300/sponsorzy",
         updates
       );
     } catch (error) {
