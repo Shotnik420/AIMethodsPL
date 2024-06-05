@@ -216,7 +216,7 @@ function AboutUs(props) {
     formData.append("nazwa", imie);
     try {
       const response = await axios.post(
-        "http://89.73.160.85:3300/uploadzarzad",
+        "https://89.73.160.90/uploadzarzad",
         formData,
         {
           headers: {
@@ -239,7 +239,7 @@ function AboutUs(props) {
   }
   function updateDoBazy(updates) {
     axios
-      .put("http://89.73.160.85:3300/zarzad", updates)
+      .put("https://89.73.160.90/zarzad", updates)
       .then((response) => {
         console.log("Post updated successfully:", response.data);
         // Update the state with the modified post
