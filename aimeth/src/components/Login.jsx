@@ -72,7 +72,7 @@ export default function Login() {
           "Login lub hasło jest błędne.";
       }
       setIsLoggedIn(response.data);
-      print(response.data);
+      console.log(response.data);
     } catch (error) {
       document.getElementById("stanlogowania").innerHTML =
         "Błąd systemu logowania.";
