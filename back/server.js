@@ -302,10 +302,12 @@ app.post("/upload", upload.single("file"), function (req, res, next) {
 
 app.post("/uploadzarzad", upload2.single("file"), function (req, res, next) {
   if (!req.file) {
+    console.error("No file uploaded.");
     return res.status(400).send("No file uploaded.");
   }
-  // Zwróć ścieżkę do pliku
-  res.send(req.file.path);
+  const relativePath = `/zarzad/${req.file.filename}`;
+  console.log(`File uploaded successfully: ${relativePath}`);
+  res.send(relativePath);
 });
 
 function checkNotAuthenticated(req, res, next) {

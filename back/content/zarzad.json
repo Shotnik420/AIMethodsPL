@@ -2,7 +2,7 @@
   "obecny1": [
     {
       "id": 1,
-      "imie": "Vip i super typ",
+      "imie": "Vip ",
       "tytul": "Farosz i naczelnik",
       "zdj": "file-1703953088861.jpg",
       "isEditing": false
@@ -62,13 +62,6 @@
     }
   ],
   "opiekunowie2": [
-    {
-      "id": 9,
-      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
-      "imie": "Dr inż. Małgorzata Muzalewska",
-      "isEditing": false,
-      "tytul": ""
-    },
     {
       "id": 10,
       "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
@@ -160,8 +153,7 @@
       "imie": "Wojciech Pyka",
       "tytul": "Wiceprezes",
       "isEditing": false
-    },
-    null
+    }
   ],
   "stary_zarzad_2019": [
     {
@@ -181,11 +173,9 @@
   ],
   "stary_zarzad_2018": [
     {
-      "id": 25,
-      "zdj": "file-1711219374692.jpg",
-      "imie": "Mariusz Lenczyk",
-      "tytul": "Prezes",
-      "isEditing": false
+      "isEditing": false,
+      "imie": "",
+      "tytul": ""
     },
     {
       "id": 26,

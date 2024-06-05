@@ -190,6 +190,7 @@ function AboutUs(props) {
           const file = fileInput.files[0];
           if (file) {
             var powrot = await sendPhoto(post, imie, pozycja, file);
+            console.log("test", powrot);
             return powrot;
           } else {
             return {
