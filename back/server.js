@@ -99,7 +99,7 @@ passport.use(
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "../public/sponsorzy/");
+    cb(null, "../aimeth/public/sponsorzy/");
   },
   filename: function (req, file, cb) {
     cb(
@@ -110,7 +110,7 @@ const storage = multer.diskStorage({
 });
 const storage2 = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "../public/zarzad/");
+    cb(null, "../aimeth//public/zarzad/");
   },
   filename: function (req, file, cb) {
     cb(

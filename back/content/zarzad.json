@@ -64,7 +64,7 @@
   "opiekunowie2": [
     {
       "id": 10,
-      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
+      "zdj": "zarzad\\file-1717593826012.jpg",
       "imie": "Mgr inż. Andrzej Jałowiecki",
       "isEditing": false,
       "tytul": ""
@@ -86,11 +86,9 @@
       "isEditing": false
     },
     {
-      "id": 13,
-      "zdj": "../../src/img/zarzad/Dszkolcz.jpg",
-      "imie": "Jakub Bręczewski",
-      "tytul": "Wiceprezes",
-      "isEditing": false
+      "isEditing": false,
+      "imie": "",
+      "tytul": ""
     }
   ],
   "stary_zarzad_2022": [

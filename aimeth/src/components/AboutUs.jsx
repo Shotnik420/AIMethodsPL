@@ -225,7 +225,7 @@ function AboutUs(props) {
           },
         }
       );
-      var szlaczek = response.data.slice(17, response.data.length);
+      var szlaczek = response.data.slice(25, response.data.length);
       return {
         ...post,
         id: post.id,
