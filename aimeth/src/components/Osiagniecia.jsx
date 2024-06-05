@@ -134,7 +134,7 @@ export default function Osiagniecia(props) {
     }));
 
     axios
-      .put("http://89.73.160.85:3300/osiagniecia", updates)
+      .put("https://89.73.160.85:3300/osiagniecia", updates)
       .then((response) => {
         console.log("Post updated successfully:", response.data);
         // Update the state with the modified post
