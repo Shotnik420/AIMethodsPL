@@ -65,7 +65,11 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false },
+    cookie: {
+      secure: true, // Użyj secure:true, jeśli używasz HTTPS
+      httpOnly: true,
+      sameSite: "none", // Upewnij się, że używasz 'none' dla cross-site cookies
+    },
   })
 );
 app.use(express.json());

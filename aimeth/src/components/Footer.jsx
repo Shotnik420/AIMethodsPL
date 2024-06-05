@@ -141,7 +141,7 @@ function Footer(props) {
               action="https://89.73.160.90/logout?_method=DELETE"
               method="POST"
             >
-              <h1 id="loginbut">WYLOGUJ</h1>
+              <button id="loginbut">WYLOGUJ</button>
             </form>
           ) : (
             <>
