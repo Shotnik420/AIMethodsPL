@@ -7,10 +7,10 @@ import axios from "axios";
 import ScrollToTop from "./components/ScrollToTop";
 export default function Router() {
   const [logged, setLogged] = useState(false);
-
+  const fileServerAdress = "https://89.76.239.142";
   useEffect(() => {
     axios
-      .get("https://89.73.160.90/check", { withCredentials: true })
+      .get(fileServerAdress + "/check", { withCredentials: true })
       .then((response) => {
         setLogged(response.data.isAuthenticated);
       })
@@ -22,9 +22,9 @@ export default function Router() {
     <BrowserRouter>
       <Navbar log={logged} />
       <ScrollToTop>
-        <AnimatedRoutes log={logged} />
+        <AnimatedRoutes log={logged} FSA={fileServerAdress} />
       </ScrollToTop>
-      <Footer log={logged} />
+      <Footer log={logged} FSA={fileServerAdress} />
     </BrowserRouter>
   );
 }

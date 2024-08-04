@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 var liczbaSponsorow = 8;
 
 function Footer(props) {
+  const fileServerAdress = props.FSA;
   const [posts, setPosts] = useState([
     {
       id: 1,
@@ -21,7 +22,7 @@ function Footer(props) {
 
   useEffect(() => {
     axios
-      .get("https://89.73.160.90/sponsorzy")
+      .get(fileServerAdress + "/sponsorzy")
       .then((response) => {
         setPosts(response.data);
         liczbaSponsorow = response.data.length - 3;
@@ -69,7 +70,7 @@ function Footer(props) {
   function wyloguj() {
     console.log("Wylogowano");
     axios
-      .get("http://89.73.160.85:3300/logout")
+      .get(fileServerAdress + "/logout")
       .then((response) => {
         window.location.reload();
       })
@@ -138,7 +139,7 @@ function Footer(props) {
           {"          "}
           {props.log ? (
             <form
-              action="https://89.73.160.90/logout?_method=DELETE"
+              action={fileServerAdress + "/logout?_method=DELETE"}
               method="POST"
             >
               <button id="loginbut">WYLOGUJ</button>

@@ -50,7 +50,7 @@ const credentials = { key: privateKey, cert: certificate, ca: caBundle };
 
 app.use(
   cors({
-    origin: "https://aimeth.netlify.app",
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );

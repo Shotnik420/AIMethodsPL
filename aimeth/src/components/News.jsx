@@ -1,12 +1,12 @@
 import React from "react";
 import "../styles/News.css";
-
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { BsFacebook } from "react-icons/bs";
 
 import { ImClock, ImPilcrow } from "react-icons/im";
-export default function News({ props, accentColor }) {
+export default function News({ props, accentColor, FSA }) {
+  const fileServerAdress = FSA;
   useEffect(() => {
     document.getElementById("newsLine").style.backgroundColor = accentColor;
     document.getElementsByClassName("mainNewsDate")[0].style.color =
@@ -38,7 +38,7 @@ export default function News({ props, accentColor }) {
   const [tytul, setTytul] = useState("");
   useEffect(() => {
     axios
-      .get("https://89.73.160.90/posts")
+      .get(fileServerAdress + "/posts")
       .then((response) => {
         console.log(response.data);
         setPosts(response.data);
@@ -79,7 +79,7 @@ export default function News({ props, accentColor }) {
     }));
     console.log(updates);
     axios
-      .put("http://89.73.160.85:3300/posts", updates)
+      .put(fileServerAdress + "/posts", updates)
       .then((response) => {
         console.log("Post updated successfully:", response.data);
         // Update the state with the modified post
@@ -209,6 +209,7 @@ export default function News({ props, accentColor }) {
               udostępniamy nasz raport za rok 2023. W tym roku..."
               date="21 lutego 2024"
             />
+
             <div className="newsColumn">
               <SecondaryNews
                 bgImg="https://sknaimeth.polsl.pl/wp-content/uploads/2023/09/20230831_214025-594x446.jpg"

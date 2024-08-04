@@ -5,13 +5,14 @@ import { useState, useEffect } from "react";
 
 import axios from "axios";
 export default function Osiagniecia(props) {
+  const fileServerAdress = props.FSA;
   const [filter, setFilter] = useState(true);
   const [whatFilter, setWhatFilter] = useState("timeDesc");
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://89.73.160.90/osiagniecia")
+      .get(fileServerAdress + "/osiagniecia")
       .then((response) => {
         console.log(response.data);
         setPosts(response.data);
@@ -134,7 +135,7 @@ export default function Osiagniecia(props) {
     }));
 
     axios
-      .put("https://89.73.160.85:3300/osiagniecia", updates)
+      .put(fileServerAdress + "/osiagniecia", updates)
       .then((response) => {
         console.log("Post updated successfully:", response.data);
         // Update the state with the modified post

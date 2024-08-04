@@ -8,6 +8,7 @@ import Projekty from "./components/Projekty";
 import { motion } from "framer-motion";
 
 function Home(props) {
+  const fileServerAdress = props.FSA;
   const [accentColor, setAccentColor] = useState("#FF7A00");
   // useEffect(() => {
   //   console.log("Home mounted");
@@ -19,13 +20,18 @@ function Home(props) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <Main accentColor={accentColor} setAccentColor={setAccentColor} />
+      <Main
+        log={props.log}
+        accentColor={accentColor}
+        setAccentColor={setAccentColor}
+        FSA={fileServerAdress}
+      />
 
-      <News log={props.log} accentColor={accentColor} />
+      <News log={props.log} accentColor={accentColor} FSA={fileServerAdress} />
 
       <Projekty accentColor={accentColor} />
 
-      <Osiagniecia log={props.log} />
+      <Osiagniecia log={props.log} FSA={fileServerAdress} />
 
       {/* <KontaktMini /> */}
     </motion.div>

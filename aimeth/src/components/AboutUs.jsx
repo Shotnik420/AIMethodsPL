@@ -4,6 +4,8 @@ import "../styles/AboutUs.css";
 import { motion } from "framer-motion";
 
 function AboutUs(props) {
+  const fileServerAdress = props.FSA;
+  console.log(fileServerAdress);
   const [posts, setPosts] = useState({
     obecny1: [
       {
@@ -113,7 +115,7 @@ function AboutUs(props) {
   }
   useEffect(() => {
     axios
-      .get("https://89.73.160.90/zarzad")
+      .get(fileServerAdress + "/zarzad")
       .then((response) => {
         if (response.data !== undefined) {
           setPosts(response.data);
@@ -217,7 +219,8 @@ function AboutUs(props) {
     formData.append("nazwa", imie);
     try {
       const response = await axios.post(
-        "https://89.73.160.90/uploadzarzad",
+        fileServerAdress + "/uploadzarzad",
+
         formData,
         {
           headers: {
@@ -240,7 +243,7 @@ function AboutUs(props) {
   }
   function updateDoBazy(updates) {
     axios
-      .put("https://89.73.160.90/zarzad", updates)
+      .put(fileServerAdress + "/zarzad", updates)
       .then((response) => {
         console.log("Post updated successfully:", response.data);
         // Update the state with the modified post

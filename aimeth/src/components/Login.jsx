@@ -5,14 +5,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import qs from "qs";
-export default function Login() {
+export default function Login(props) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const fileServerAdress = props.FSA;
   useEffect(() => {
     axios
-      .get("https://89.73.160.90/check", { withCredentials: true })
+      .get(fileServerAdress + "/check", { withCredentials: true })
       .then((response) => {
         setIsLoggedIn(response.data.isAuthenticated);
       })
@@ -25,7 +25,7 @@ export default function Login() {
 
   function checkLoginStatus() {
     axios
-      .get("https://89.73.160.90/check", { withCredentials: true })
+      .get(fileServerAdress + "/check", { withCredentials: true })
       .then((response) => {
         console.log(response.data.isAuthenticated);
       })
@@ -36,7 +36,7 @@ export default function Login() {
 
   function wyloguj() {
     axios
-      .get("https://89.73.160.90/logout", { withCredentials: true })
+      .get(fileServerAdress + "/logout", { withCredentials: true })
       .then((response) => {
         setIsLoggedIn(response.data.isLoggedIn);
       })
@@ -56,7 +56,7 @@ export default function Login() {
 
       const config = {
         method: "post",
-        url: "https://89.73.160.90/login",
+        url: fileServerAdress + "/login",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
@@ -82,7 +82,7 @@ export default function Login() {
   const startPolling = () => {
     const interval = setInterval(async () => {
       try {
-        const response = await axios.get("https://89.73.160.90/pass", {
+        const response = await axios.get(fileServerAdress + "pass", {
           withCredentials: true,
         });
         if (response.data === true) {
@@ -90,7 +90,7 @@ export default function Login() {
           setLoginStatus("Logged in successfully.");
           clearInterval(interval);
         } else {
-          const failResponse = await axios.get("https://89.73.160.90/fail", {
+          const failResponse = await axios.get(fileServerAdress + "fail", {
             withCredentials: true,
           });
           if (failResponse.data === false) {

@@ -15,6 +15,7 @@ import Erne from "./components/Erne";
 import AIDIAG from "./components/AIDIAG";
 
 export default function AnimatedRoutes(props) {
+  const fileServerAdress = props.FSA;
   const location = useLocation();
   useEffect(() => {
     if (location.pathname === "/silesianphoenix") {
@@ -50,14 +51,18 @@ export default function AnimatedRoutes(props) {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route index element={<Home log={props.log} />} />
-        <Route path="/kontakt" element={<Kontakt />} />
+        <Route
+          index
+          element={<Home log={props.log} FSA={fileServerAdress} />}
+        />
+        <Route path="/kontakt" element={<Kontakt FSA={fileServerAdress} />} />
         <Route path="/integralsenso" element={<Senso />} />
-        <Route path="/erne" element={<Erne />} />
-        <Route path="/aidiag" element={<AIDIAG />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/erne" element={<Erne FSA={fileServerAdress} />} />
+        <Route path="/aidiag" element={<AIDIAG FSA={fileServerAdress} />} />
+        <Route path="/login" element={<Login FSA={fileServerAdress} />} />
         <Route
           path="/silesianphoenix"
+          FSA={fileServerAdress}
           element={
             <>
               <TitleParallax />
@@ -67,9 +72,16 @@ export default function AnimatedRoutes(props) {
           }
         />
         <Route path="/test" element={<TitleParallax />} />
-        <Route path="/aboutUs" element={<AboutUs log={props.log} />} />
-        <Route path="/wspolpraca" element={<Wspolpraca log={props.log} />} />
-        <Route path="/archiwum" element={<Archiwum />} />
+        <Route
+          path="/aboutUs"
+          element={<AboutUs log={props.log} FSA={fileServerAdress} />}
+        />
+        <Route
+          path="/wspolpraca"
+          element={<Wspolpraca log={props.log} />}
+          FSA={fileServerAdress}
+        />
+        <Route path="/archiwum" element={<Archiwum FSA={fileServerAdress} />} />
       </Routes>
     </AnimatePresence>
   );
