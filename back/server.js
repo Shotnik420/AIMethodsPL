@@ -16,13 +16,22 @@ const cors = require("cors");
 const fs = require("fs");
 
 const initialize = require("./passport-config");
-let users = [
-  { id: 1, username: "admin", password: "admin" },
-  { id: 2, username: "user", password: "user" },
-];
-users = users.map((user) => {
+
+const usersRaw = process.env.USERS;
+var usersFake = usersRaw.split("|");
+var users = usersFake.map((user) => {
+  user = user.split(",");
+  return { userId: user[0], username: user[1] };
+});
+
+var passes = "";
+passes = process.env.PASSWORDS.split("|").map((pass) => {
+  pass = pass.split(",");
+  return { userId: pass[0], password: pass[1] };
+});
+var users = users.map((user) => {
   const hash = bcrypt.hashSync(
-    user.password,
+    passes.find((pass) => pass.userId == user.userId).password,
     parseInt(process.env.SALT_ROUNDS)
   );
   return { ...user, password: hash };
