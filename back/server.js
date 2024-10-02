@@ -29,7 +29,7 @@ users = users.map((acc) => {
     pass = process.env.ADMINPASS;
   }
   const hash = bcrypt.hashSync(pass, parseInt(process.env.SALT_ROUNDS));
-  return { ...user, password: hash };
+  return { username: user, password: hash };
 });
 initialize(
   passport,
