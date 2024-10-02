@@ -7,7 +7,7 @@ import axios from "axios";
 import ScrollToTop from "./components/ScrollToTop";
 export default function Router() {
   const [logged, setLogged] = useState(false);
-  const fileServerAdress = "http://89.76.239.142:443";
+  const fileServerAdress = "https://89.76.239.142:443";
   useEffect(() => {
     axios
       .get(fileServerAdress + "/check", { withCredentials: true })
