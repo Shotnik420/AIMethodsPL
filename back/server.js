@@ -54,7 +54,7 @@ const credentials = { key: privateKey, cert: certificate, ca: caBundle };
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://aimeth.netlify.app",
     credentials: true,
   })
 );
@@ -100,6 +100,21 @@ passport.use(
     });
   })
 );
+
+passport.serializeUser(function (user, done) {
+  // Here you specify what to store in the session. Typically, the user ID is stored.
+  done(null, user.username); // You can choose to store the username or any unique identifier.
+});
+
+passport.deserializeUser(function (username, done) {
+  // This function takes the stored session data (e.g., username) and reconstructs the user object
+  const user = users.find((user) => user.username === username);
+  if (user) {
+    done(null, user);
+  } else {
+    done(new Error("User not found"));
+  }
+});
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
