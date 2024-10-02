@@ -2,23 +2,23 @@
   "obecny1": [
     {
       "id": 1,
-      "imie": "Vip ",
-      "tytul": "Farosz i naczelnik",
-      "zdj": "file-1727860801204.jpg",
+      "imie": "Daniel Szota :)",
+      "tytul": "Osoba trzecia",
+      "zdj": "file-1711219168802.jpeg",
       "isEditing": false
     },
     {
       "id": 2,
       "imie": "Julia Nowak",
       "tytul": "Członek Zarządu",
-      "zdj": "file-1703953088865.jpg",
+      "zdj": "file-1727860801204.jpg",
       "isEditing": false
     },
     {
       "id": 3,
       "imie": "Jakub Gurgul",
       "tytul": "Członek Zarządu",
-      "zdj": "file-1703953088868.png",
+      "zdj": "file-1727860801204.jpg",
       "isEditing": false
     }
   ],
