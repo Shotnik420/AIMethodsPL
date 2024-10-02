@@ -70,9 +70,9 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: true, // Użyj secure:true, jeśli używasz HTTPS
+      secure: true,
       httpOnly: true,
-      sameSite: "none", // Upewnij się, że używasz 'none' dla cross-site cookies
+      sameSite: "none",
     },
   })
 );
@@ -181,7 +181,7 @@ app.get("/posts", (req, res) => {
   fs.readFile("./content/news.json", "utf8", (err, data) => {
     if (err) {
       console.error(err);
-      res.status(500).send("An error occurred while reading the file.");
+      res.status(500).send("Error podczas odczytywania pliku");
     } else {
       res.json(JSON.parse(data));
     }
@@ -197,9 +197,9 @@ app.put("/posts", (req, res) => {
     (err) => {
       if (err) {
         console.error(err);
-        res.status(500).send("An error occurred while writing to the file.");
+        res.status(500).send("Error podczas zapisywania pliku");
       } else {
-        res.status(200).send("Data successfully written to file.");
+        res.status(200).send("Udało się! Dane zostały zapisane");
       }
     }
   );
