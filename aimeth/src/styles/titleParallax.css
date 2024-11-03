@@ -7,7 +7,7 @@
   background-size: 100% 65%;
   background-repeat: no-repeat;
   overflow-y: hidden;
- 
+
   position: relative;
   top: -3.5vh;
   margin-bottom: -3.5vh;
@@ -15,67 +15,62 @@
   flex-direction: column;
   align-items: center;
 }
-.parallaxHolder{
+.parallaxHolder {
   width: 100vw;
   height: 100vh;
   position: absolute;
   top: 0vh;
   overflow: hidden;
 }
- .titleParallaxObject{
+.titleParallaxObject {
   height: 100vh;
   width: 100vw;
   position: absolute;
   overflow: hidden;
+}
 
- }
-
- .titleParallax--1{
+.titleParallax--1 {
   background-image: url(../img/parallaxTite/01.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 200vh;
   top: -2vh;
   z-index: 6;
- }
- 
- .titleParallax--2{
+}
+
+.titleParallax--2 {
   background-image: url(../img/parallaxTite/02.png);
   background-size: 100% 100%;
   top: -1vh;
 
-z-index: 5;
- }
- .titleParallax--3{
+  z-index: 5;
+}
+.titleParallax--3 {
   background-image: url(../img/parallaxTite/03.png);
   background-size: 100% 100%;
   top: -2vh;
-z-index: 3;
- }
- .titleParallax--4{
+  z-index: 3;
+}
+.titleParallax--4 {
   background-image: url(../img/parallaxTite/04.png);
   background-size: 100% 100%;
   top: -3vh;
   z-index: 2;
- }
- .titleParallax--5{
+}
+.titleParallax--5 {
   background-image: url(../img/parallaxTite/05T.png);
   top: 0vh;
 
   background-size: 100% 100%;
   z-index: 1;
-  
- }
+}
 
-
-
- .titleParallaxLogo{
+.titleParallaxLogo {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 
   position: absolute;
   top: 3vh;
@@ -85,9 +80,9 @@ z-index: 3;
   background-repeat: no-repeat;
   background-position: 50% 20%;
   z-index: 4;
- }
+}
 
- .text{
+.text {
   position: relative;
   top: 30vh;
   left: -1.5vh;
@@ -96,11 +91,8 @@ z-index: 3;
   display: flex;
   color: white;
   text-shadow: 0px 5px 10px black;
-
- }
- .text > p{
+}
+.text > p {
   padding-left: 1.5vh;
   color: rgb(255, 123, 0);
-  
- }
-
+}
