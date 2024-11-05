@@ -1,6 +1,5 @@
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
+require("dotenv").config();
+
 const multer = require("multer");
 const path = require("path");
 const express = require("express");
@@ -18,7 +17,8 @@ const fs = require("fs");
 const initialize = require("./passport-config");
 
 var user = process.env.USER;
-var admin = process.env.ADMIN;
+var admin = "process.env.ADMIN";
+console.log(user, process.env.USERPASS, admin, process.env.ADMINPASS);
 
 var users = [user, admin];
 users = users.map((acc) => {
@@ -54,15 +54,16 @@ const credentials = { key: privateKey, cert: certificate, ca: caBundle };
 
 app.use(
   cors({
-    origin: "https://aimeth.netlify.app",
+    origin: ["http://localhost:3300", "http://frontend:3300"],
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
 app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(flash());
 app.use(
   session({
@@ -142,26 +143,26 @@ const storage2 = multer.diskStorage({
 const upload = multer({ storage: storage });
 const upload2 = multer({ storage: storage2 });
 
-app.get("/check", (req, res) => {
+app.get("/api/check", (req, res) => {
   res.json({ isAuthenticated: req.isAuthenticated() });
 });
-app.get("/fail", (req, res) => {
+app.get("/api/fail", (req, res) => {
   console.log("fail");
   res.send(false);
 });
-app.get("/pass", (req, res) => {
+app.get("/api/pass", (req, res) => {
   console.log("true");
   res.send(true);
 });
-app.get("/ch", (req, res) => {
+app.get("/api/ch", (req, res) => {
   res.json(req.session);
 });
-app.get("/login", checkNotAuthenticated, (req, res) => {
+app.get("/api/login", checkNotAuthenticated, (req, res) => {
   res.send("Login page");
 });
 
 app.post(
-  "/login",
+  "/api/login",
   passport.authenticate("local", {
     successRedirect: "/pass",
     failureRedirect: "/fail",
@@ -169,7 +170,7 @@ app.post(
   })
 );
 
-app.delete("/logout", (req, res) => {
+app.delete("/api/logout", (req, res) => {
   req.logout(function (err) {
     if (err) {
       return next(err);
@@ -177,7 +178,7 @@ app.delete("/logout", (req, res) => {
   });
 });
 
-app.get("/posts", (req, res) => {
+app.get("/api/posts", (req, res) => {
   fs.readFile("./content/news.json", "utf8", (err, data) => {
     if (err) {
       console.error(err);
@@ -187,7 +188,7 @@ app.get("/posts", (req, res) => {
     }
   });
 });
-app.put("/posts", (req, res) => {
+app.put("/api/posts", (req, res) => {
   const configData = req.body;
   console.log(configData);
   fs.writeFile(
@@ -205,7 +206,7 @@ app.put("/posts", (req, res) => {
   );
 });
 
-app.get("/osiagniecia", (req, res) => {
+app.get("/api/osiagniecia", (req, res) => {
   fs.readFile("./content/osiagniecia.json", "utf8", (err, data) => {
     if (err) {
       console.error(err);
@@ -216,7 +217,7 @@ app.get("/osiagniecia", (req, res) => {
   });
 });
 
-app.put("/osiagniecia", (req, res) => {
+app.put("/api/osiagniecia", (req, res) => {
   const configData = req.body;
   console.log(configData);
   fs.writeFile(
@@ -234,7 +235,7 @@ app.put("/osiagniecia", (req, res) => {
   );
 });
 
-app.get("/zarzad", (req, res) => {
+app.get("/api/zarzad", (req, res) => {
   fs.readFile("./content/zarzad.json", "utf8", (err, data) => {
     if (err) {
       console.error(err);
@@ -245,7 +246,7 @@ app.get("/zarzad", (req, res) => {
   });
 });
 
-app.put("/zarzad", (req, res) => {
+app.put("/api/zarzad", (req, res) => {
   const configData = req.body;
   console.log(configData);
   fs.writeFile(
@@ -263,7 +264,7 @@ app.put("/zarzad", (req, res) => {
   );
 });
 
-app.get("/sponsorzy", (req, res) => {
+app.get("/api/sponsorzy", (req, res) => {
   fs.readFile("./content/sponsor.json", "utf8", (err, data) => {
     if (err) {
       console.error(err);
@@ -274,7 +275,7 @@ app.get("/sponsorzy", (req, res) => {
   });
 });
 
-app.put("/sponsorzy", (req, res) => {
+app.put("/api/sponsorzy", (req, res) => {
   const configData = req.body;
   console.log(configData);
   fs.writeFile(
@@ -292,7 +293,7 @@ app.put("/sponsorzy", (req, res) => {
   );
 });
 
-app.put("/zarzad", (req, res) => {
+app.put("/api/zarzad", (req, res) => {
   const configData = req.body;
   console.log(configData);
   fs.writeFile(
@@ -310,7 +311,7 @@ app.put("/zarzad", (req, res) => {
   );
 });
 
-app.post("/upload", upload.single("file"), function (req, res, next) {
+app.post("/api/upload", upload.single("file"), function (req, res, next) {
   if (!req.file) {
     return res.status(400).send("No file uploaded.");
   }
@@ -319,15 +320,19 @@ app.post("/upload", upload.single("file"), function (req, res, next) {
   res.send(req.file.path);
 });
 
-app.post("/uploadzarzad", upload2.single("file"), function (req, res, next) {
-  if (!req.file) {
-    console.error("No file uploaded.");
-    return res.status(400).send("No file uploaded.");
+app.post(
+  "/api/uploadzarzad",
+  upload2.single("file"),
+  function (req, res, next) {
+    if (!req.file) {
+      console.error("No file uploaded.");
+      return res.status(400).send("No file uploaded.");
+    }
+    const relativePath = `/zarzad/${req.file.filename}`;
+    console.log(`File uploaded successfully: ${relativePath}`);
+    res.send(relativePath);
   }
-  const relativePath = `/zarzad/${req.file.filename}`;
-  console.log(`File uploaded successfully: ${relativePath}`);
-  res.send(relativePath);
-});
+);
 
 function checkNotAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
@@ -340,7 +345,7 @@ function checkAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
   }
-  res.redirect("/login");
+  res.redirect("/api/login");
 }
 const httpsServer = https.createServer(credentials, app);
 httpsServer.listen(443, () => console.log("HTTPS Server running on port 443!"));

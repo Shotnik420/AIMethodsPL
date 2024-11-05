@@ -15,7 +15,7 @@ RUN npm ci
 COPY . .
 
 # 6. Otwórz port 3000 (lub inny port, na którym działa Express)
-EXPOSE 3300
+EXPOSE 80
 
 # 7. Zdefiniuj komendę uruchamiającą aplikację
 CMD ["node", "server.js"]

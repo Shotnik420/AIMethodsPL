@@ -8,7 +8,6 @@ import axios from "axios";
 
 function Sponsor(props) {
   const imageUrl = `/sponsorzy/${props.image}`;
-
   if (props.isEditing) {
     return (
       <div className="bam">
@@ -48,6 +47,8 @@ function Sponsor(props) {
   }
 }
 export default function Wspolpraca(props) {
+  const fileServerAdress = props.FSA;
+  console.log("FSA", fileServerAdress);
   const [posts, setPosts] = useState([
     {
       id: 1,
@@ -57,8 +58,9 @@ export default function Wspolpraca(props) {
   ]);
   useEffect(() => {
     axios
-      .get("https://89.73.160.90/sponsorzy")
+      .get(fileServerAdress + "/sponsorzy")
       .then((response) => {
+        console.log(response.data);
         setPosts(response.data);
       })
       .catch((error) => {
@@ -142,7 +144,7 @@ export default function Wspolpraca(props) {
 
         try {
           const response = await axios.post(
-            "https://89.73.160.85:3300/upload",
+            fileServerAdress + "/upload",
             formData,
             {
               headers: {
@@ -178,7 +180,7 @@ export default function Wspolpraca(props) {
   async function updatePost(updates) {
     try {
       const response = await axios.put(
-        "https://89.73.160.85:3300/sponsorzy",
+        fileServerAdress + "/sponsorzy",
         updates
       );
     } catch (error) {

@@ -1,29 +1,18 @@
+# Use an official Node.js image as a base
 FROM node:18-alpine as BUILD_IMAGE
 
+# Set the working directory
 WORKDIR /app
 
-COPY package.json .
-
+# Copy package.json first and install dependencies
+COPY package.json . 
+RUN rm -rf node_modules/.vite
 RUN npm install
-
+# Copy the rest of your application code
 COPY . .
 
-
-#port: 3000
+# Expose the correct port
 EXPOSE 3300 
 
+# Start the app
 CMD ["npm", "run", "preview"]
-
-# RUN npm run build
-
-# FROM node:18-alpine as PRODUCTION_IMAGE
-# WORKDIR /app/react-app
-
-# COPY --from=BUILD_IMAGE /app/dist/ /app/dist/
-# EXPOSE 3000
-# COPY package.json .
-# COPY vite.config.js .
-
-# RUN npm install
-# EXPOSE 3000
-# CMD ["npm", "run", "preview"]

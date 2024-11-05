@@ -65,18 +65,19 @@ export default function Login(props) {
       };
 
       const response = await axios(config);
-      console.log(response);
       console.log(response.data);
-      if (!response.data) {
+      if (response.data.redirect) {
+        // Handle the redirect case
+        window.location.href = response.data.redirect; // Navigate to success/failure redirect
+      } else {
         document.getElementById("stanlogowania").innerHTML =
           "Login lub hasło jest błędne.";
       }
       setIsLoggedIn(response.data);
-      console.log(response.data);
     } catch (error) {
+      console.error("Error during login:", error);
       document.getElementById("stanlogowania").innerHTML =
         "Błąd systemu logowania.";
-      // Obsługa błędu logowania
     }
   };
   const startPolling = () => {

@@ -78,8 +78,7 @@ export default function AnimatedRoutes(props) {
         />
         <Route
           path="/wspolpraca"
-          element={<Wspolpraca log={props.log} />}
-          FSA={fileServerAdress}
+          element={<Wspolpraca log={props.log} FSA={fileServerAdress} />}
         />
         <Route path="/archiwum" element={<Archiwum FSA={fileServerAdress} />} />
       </Routes>
