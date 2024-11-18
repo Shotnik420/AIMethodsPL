@@ -11,6 +11,9 @@ RUN npm install
 # Copy the rest of your application code
 COPY . .
 
+RUN npm install vite --save-dev
+RUN npm run build
+
 # Expose the correct port
 EXPOSE 3300 
 
