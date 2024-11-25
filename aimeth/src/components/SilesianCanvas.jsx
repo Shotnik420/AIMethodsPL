@@ -3,14 +3,14 @@ import obrazek from "../img/sprite.png";
 import "../styles/SilesianCanvas.css";
 import { Parallax } from "react-scroll-parallax";
 import { useInView } from "react-intersection-observer";
-var testuj = 0;
+var progressNormalized = 0;
 var text1 = 100;
 var tescik;
 function SilesianCanvas() {
-
   const [progress, setProgress] = useState();
-  testuj = Math.floor(progress * 47);
-  text1 = -5 * testuj + 100;
+
+  progressNormalized = Math.floor(progress * 47);
+  text1 = -5 * progressNormalized + 100;
   const canvas = useRef();
   const backgroundRef = useRef();
 
@@ -21,11 +21,11 @@ function SilesianCanvas() {
       return;
     }
     ctx.clearRect(0, 0, 1280, 720);
-    if (isNaN(testuj)) {
+    if (isNaN(progressNormalized)) {
       ctx.drawImage(background, 0, 0, 1280, 720, 0, 0, 1280, 725);
     } else {
 
-      ctx.drawImage(background, 0, 725 * testuj, 1280, 720, 0, 0, 1280, 725);
+      ctx.drawImage(background, 0, 725 * progressNormalized, 1280, 720, 0, 0, 1280, 725);
     }
 
     // document.querySelector(".silesianText--1").style =
@@ -36,29 +36,29 @@ function SilesianCanvas() {
   function textDrawing(){
  
     
-    if(testuj <= 14){
+    if(progressNormalized <= 14){
       document.querySelector(".silesianText--1").style ="opacity: 100%; top: 10vh; ";
     }
-    else if(testuj > 15){
+    else if(progressNormalized > 15){
       document.querySelector(".silesianText--1").style ="opacity: 0%; top: 5vh; ";
     }
 
 
-    if(testuj <=16){
+    if(progressNormalized <=16){
       document.querySelector(".silesianText--2--LineContainer").style ="left: 50vh; opacity: 0% ";
     }
-    else if(testuj > 16 && testuj <=38){
+    else if(progressNormalized > 16 && progressNormalized <=38){
       document.querySelector(".silesianText--2--LineContainer").style ="left: 19vh; opacity: 100% ";
     }
-    if(testuj > 38) {
+    if(progressNormalized > 38) {
       document.querySelector(".silesianText--2--LineContainer").style ="left: 50vh; opacity: 0% ";
     }
 
-    if(testuj <= 38){
+    if(progressNormalized <= 38){
       document.querySelector(".silesianText--3").style ="opacity: 0%; top: -35vh; ";
 
     }
-    if(testuj > 38){
+    if(progressNormalized > 38){
       document.querySelector(".silesianText--3").style ="opacity: 100%; top: -40vh;";
     }
   }
@@ -76,14 +76,17 @@ function SilesianCanvas() {
     if (!canvas.current) {
       return;
     }
+    console.log(progress)
+    console.log(progressNormalized)
+
     draw(canvas, backgroundRef.current);
     requestAnimationFrame(animate);
   }
 
   return (
     <div className="silesianParallax">
-      <div class="silesianParallaxSticky">
-        {/* {testuj} */}
+      <div className="silesianParallaxSticky">
+        {progressNormalized}
         <canvas ref={canvas} width={1280} height={720} />
         <div className="silesianText--1">
           <p>

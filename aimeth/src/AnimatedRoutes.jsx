@@ -5,14 +5,13 @@ import Home from "./Home";
 import Kontakt from "./Kontakt";
 import Login from "./components/Login";
 import Senso from "./components/Senso";
-import TitleParallax from "./components/titleParallax";
 import Archiwum from "./components/Archiwum";
 import Wspolpraca from "./components/Wspolpraca";
 import AboutUs from "./components/AboutUs";
-import SilesianCanvas from "./components/SilesianCanvas";
 import { AnimatePresence } from "framer-motion";
 import Erne from "./components/Erne";
 import AIDIAG from "./components/AIDIAG";
+import SilesianPhoenix from "./components/SilesianPhoenix";
 
 export default function AnimatedRoutes(props) {
   const fileServerAdress = props.FSA;
@@ -65,13 +64,10 @@ export default function AnimatedRoutes(props) {
           FSA={fileServerAdress}
           element={
             <>
-              <TitleParallax />
-
-              <SilesianCanvas />
+              <SilesianPhoenix  />
             </>
           }
         />
-        <Route path="/test" element={<TitleParallax />} />
         <Route
           path="/aboutUs"
           element={<AboutUs log={props.log} FSA={fileServerAdress} />}

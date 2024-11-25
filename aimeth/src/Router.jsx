@@ -7,7 +7,7 @@ import axios from "axios";
 import ScrollToTop from "./components/ScrollToTop";
 export default function Router() {
   const [logged, setLogged] = useState(false);
-  const fileServerAdress = "/api";
+  const fileServerAdress = "localhost:5173";
 
   useEffect(() => {
     axios
