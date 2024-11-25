@@ -6,8 +6,11 @@ import obraz from "../img/sprite.png";
 import { motion } from "framer-motion";
 import SilesianCanvas from "./SilesianCanvas";
 import TitleParallax from "./titleParallax";
-import SilesianPhoenixAbout from "./SilesianPhoenixAbout";
 
+import SilesianPhoenixAbout from "./SilesianPhoenixAbout";
+import SilesianPhoenixTeam from "./SilesianPhoenixTeam";
+import SilesianPhoenixSponsors from "./SilesianPhoenixSponsors";
+import SilesianPhoenixSocials from "./SilesianPhoenixSocials";
 
 function SilesianPhoenix() {
   return (
@@ -19,9 +22,14 @@ function SilesianPhoenix() {
     >
       <TitleParallax />
       <SilesianCanvas />
-      <div className="line" ></div>
+      <div className="line"></div>
       <SilesianPhoenixAbout />
+      <SilesianPhoenixTeam />
+      <SilesianPhoenixSponsors />
+      <div className="line"></div>
 
+      <SilesianPhoenixSocials />
+      <div className="line"></div>
     </motion.div>
   );
 }
