@@ -60,8 +60,6 @@ export default function Projekty({ accentColor }) {
             </div>
           </div>
         </Link>
-      </div>
-      <div className="projekty_belt">
         <Link to={"/erne"}>
           <div className="projekt_click erneProj">
             <div>

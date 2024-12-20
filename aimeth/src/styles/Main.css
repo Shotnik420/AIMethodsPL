@@ -1,19 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
 
 .Main {
-  height: 100vh;
+  height: 100svh;
 }
 
 .mainBackground {
   width: 400vw;
-  height: 100vh;
+  height: 100svh;
 
   display: flex;
   transition: 0.5s;
+  div {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 .projects {
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   background-size: 100%;
   background-position: center;
   transition: 0.5s;
@@ -21,12 +25,12 @@
 .arrowLeft,
 .arrowRight {
   position: absolute;
-  top: 45vh;
-  font-size: 3vh;
+  top: 45svh;
+  font-size: 3svh;
   color: white;
   cursor: pointer;
   transition: 0.5s;
-  font-size: 10vh;
+  font-size: 10svh;
 
   z-index: 2;
 }
@@ -38,11 +42,11 @@
 }
 .arrowLeft:hover {
   transform: scale(1.01);
-  left: -1vh;
+  left: -1svh;
 }
 .arrowRight:hover {
   transform: scale(1.01);
-  right: -1vh;
+  right: -1svh;
 }
 .silesianPhoenix {
   background-image: url(../img/mainBackground1.jpg);
@@ -52,7 +56,7 @@
 }
 .sensoBg {
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   position: absolute;
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -70,10 +74,10 @@
 }
 .SPsection {
   position: relative;
-  top: 15vh;
+  top: 15svh;
   left: 7vw;
   width: 27vw;
-  height: 60vh;
+  height: 60dsvh;
 
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -88,40 +92,41 @@
   justify-content: space-evenly;
   flex-direction: column;
 
-  backdrop-filter: blur(0.2vh);
+  backdrop-filter: blur(0.2svh);
 }
 
 .SPlogo {
   position: relative;
   left: -4vw;
-  width: 27vh;
-  height: 27vh;
+  width: 29svh;
+  height: 27svh;
   background-image: url(../img/splogo.png);
-  background-size: contain;
+  background-size: cover;
+  background-position: -0.1vw;
   background-repeat: no-repeat;
 }
 .SPdesc {
   width: 22vw;
-  height: 15vh;
+  height: 15svh;
 
   font-weight: 500;
-  font-size: 2vh;
+  font-size: 2svh;
 }
 .mainBtn {
   position: relative;
   left: 5vw;
 
   width: 10vw;
-  height: 5vh;
-  border-radius: 1.5vh;
+  height: 5svh;
+  border-radius: 1.5svh;
 
   cursor: pointer;
 
   color: white;
-  font-size: 1.5vh;
+  font-size: 1.5svh;
   font-weight: bold;
   text-align: center;
-  line-height: 5vh;
+  line-height: 5svh;
 
   transition: 0.5s;
 }
@@ -130,16 +135,16 @@
 }
 .arrow {
   position: relative;
-  top: 1vh;
-  font-size: 3vh;
+  top: 1svh;
+  font-size: 3svh;
 }
 
 .events {
   width: 62vw;
-  height: 15vh;
+  height: 15svh;
 
   position: absolute;
-  bottom: 0vh;
+  bottom: 0svh;
 
   display: flex;
   align-items: center;
@@ -155,7 +160,7 @@
     rgba(0, 0, 0, 0.05) 0%,
     rgba(0, 0, 0, 0.31) 21%
   );
-  backdrop-filter: blur(0.3vh);
+  backdrop-filter: blur(0.3svh);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,29 +172,29 @@
   color: var(--orange);
   font-weight: 500;
   font-family: "DM Mono", monospace;
-  font-size: 1.7vh;
+  font-size: 1.7svh;
   transition: 0.5s;
 }
 .eventLine {
   width: 90%;
-  height: 0.3vh;
+  height: 0.3svh;
   background-color: white;
   opacity: 0.7;
 }
 .eventType {
   width: 90%;
   position: absolute;
-  top: 4.7vh;
+  top: 4.7svh;
   font-weight: 300;
   font-family: "DM Mono", monospace;
-  font-size: 1.4vh;
+  font-size: 1.4svh;
 }
 .eventName {
   width: 100%;
   position: relative;
-  top: 1vh;
+  top: 1svh;
   font-weight: 600;
-  font-size: 1.5vh;
+  font-size: 1.5svh;
 }
 .EventContainer {
   height: 60%;
@@ -207,16 +212,16 @@
 }
 .eventBtn {
   position: relative;
-  top: -2vh;
+  top: -2svh;
 
-  width: 3vh;
-  height: 3vh;
+  width: 3svh;
+  height: 3svh;
   background-color: var(--orange);
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 3vh;
+  font-size: 3svh;
   border-radius: 50%;
   cursor: pointer;
 
@@ -224,4 +229,71 @@
 }
 .eventBtn:hover {
   transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+  .mainBackground {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  .Main {
+    max-width: 100vw !important;
+    overflow: hidden !important;
+    position: relative;
+    margin-right: 0 !important;
+    width: 100vw;
+  }
+
+  .projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .silesianPhoenix {
+    background-position: center;
+  }
+  .arrowLeft,
+  .arrowRight {
+    font-size: 5svh;
+  }
+  .SPsection {
+    left: 0;
+    top: 5svh;
+
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .SPlogo {
+    left: 0;
+    top: -4svh;
+    width: 51vw;
+    height: 50vw;
+    background-size: contain;
+    background-position: -1vw;
+  }
+
+  .SPdesc {
+    width: 90%;
+    font-size: 4.2dvw;
+  }
+  .mainBtn {
+    width: 60%;
+    left: 0;
+  }
+
+  .sensoBg {
+    height: 117svh;
+  }
 }

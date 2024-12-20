@@ -25,11 +25,14 @@
   margin-bottom: 2vh;
 }
 .projekty_belt {
+  position: relative;
+  top: 4svh;
   width: 70vw;
-  height: 40vh;
-
-  display: flex;
-  justify-content: space-around;
+  height: 80vh;
+  gap: 4vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .projekt_click {
@@ -101,4 +104,50 @@
   top: 6vh;
   transform: scale(0.9);
   opacity: 0.6;
+}
+
+@media only screen and (max-width: 600px) {
+  #projekty {
+    height: 150vh;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100vw;
+  }
+
+  .projekty_belt {
+    width: 95%;
+    flex-wrap: wrap;
+    top: -20svh;
+    gap: 10vw;
+    margin-left: 2.5vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    a {
+      width: 40vw;
+    }
+  }
+  .projekt_click {
+    width: 40vw;
+    height: 30vh;
+
+    div {
+      width: 40vw;
+    }
+  }
+
+  .projekt_img {
+    width: 40vw;
+    height: 30vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 40vw;
+      height: 25vh;
+      object-fit: contain;
+    }
+  }
 }

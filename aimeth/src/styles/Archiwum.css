@@ -46,7 +46,7 @@
   transform: scale(0.95);
 }
 .projekt {
-  width: 23vw;
+  width: 100%;
   border-radius: 0.5vh;
   height: 100%;
   display: flex;
@@ -145,4 +145,30 @@
 .popupClose:hover {
   transform: scale(0.9);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .Archiwum {
+    height: 170vh;
+    h1 {
+      font-size: 10vw;
+    }
+    p {
+      font-size: 6vw;
+    }
+  }
+
+  .projektyGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+    width: 100%;
+  }
+  .projekt_tekst > p {
+    font-size: 4vw;
+  }
+
+  .projekt > span > img {
+    width: 100%;
+    margin-left: -50%;
+  }
 }

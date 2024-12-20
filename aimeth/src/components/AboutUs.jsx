@@ -285,7 +285,10 @@ function AboutUs(props) {
         <div className="verticalText"> Tak wyglądamy</div>
         <div className="verticalLine"></div>
         <div className="mPContainer">
-          <div className="mainPhoto"></div>
+          <img
+            src="https://sknaimeth.polsl.pl/wp-content/uploads/2017/03/KołoAll.jpg"
+            className="mainPhoto"
+          />
         </div>
       </div>
       <div className="management">

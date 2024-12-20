@@ -73,6 +73,71 @@
   margin-bottom: 2vh;
 }
 
+.dane_kontaktowe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+
+  font-family: "Rubik", sans-serif;
+}
+
+.dane_kontaktowe > h1 {
+  font-size: 4vh;
+  margin: 3vh 0;
+}
+
+.dane_kontaktowe > p > input {
+  width: 35vw;
+  height: 3.5vh;
+  border-radius: 0.5vh;
+  padding-left: 1vw;
+  font-size: 2vh;
+  border: none;
+  font-family: "Rubik", sans-serif;
+  margin: 2.5vh 0;
+}
+.dane_kontaktowe > p {
+  font-size: 3vh;
+  padding-left: 1vw;
+  color: white;
+}
+.dane_kontaktowe > p > textarea {
+  width: 34vw;
+  font-family: "Rubik", sans-serif;
+  height: 14vh;
+  border-radius: 1vh;
+  padding: 1vw;
+  font-size: 2vh;
+  border: none;
+  text-align: justify;
+  resize: none;
+  margin: 1vh 0;
+}
+
+.dane_kontaktowe > button {
+  border-radius: 1vh;
+  background-color: #fff #5583bd;
+  border: none;
+  color: #5583bd;
+  font-size: 3vh;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Rubik", sans-serif;
+  margin-left: 1vw;
+  transition: 0.3s;
+  margin-top: 6.5vh;
+
+  padding: 1vh 2vh;
+}
+.dane_kontaktowe > button:hover {
+  transform: scale(0.95);
+}
+
 @media only screen and (max-width: 450px) {
   .kontakt_main {
     height: 100vh;
@@ -183,4 +248,51 @@
 }
 .Formularz_pp > h1 {
   font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .kontakt_main {
+    height: auto;
+  }
+  .kontakt_lp {
+    padding-top: 2vh;
+    height: 50vh;
+  }
+  .kontakt_lp > ol > li {
+    svg,
+    p {
+      font-size: 4vw;
+    }
+
+    h1 {
+      font-size: 8vw;
+    }
+    h2 {
+      font-size: 5vw;
+    }
+  }
+
+  .kontakt_pp {
+    height: 80vh;
+
+    .dane_kontaktowe {
+      h1 {
+        font-size: 6vw;
+        text-align: center;
+      }
+
+      p {
+        width: 90%;
+
+        input,
+        textarea {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .Formularz_pp > h1 {
+    font-size: 6vw;
+  }
 }
