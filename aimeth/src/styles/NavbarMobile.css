@@ -1,0 +1,124 @@
+.navbarMobile {
+  transition: 0.5s;
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+  flex-direction: column;
+
+  .menu {
+    width: 100vw;
+    height: 10vh;
+    background-color: #1b1b1bbe;
+    backdrop-filter: blur(0.8vh);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2vw;
+    .menuButton {
+      width: 9vh;
+      height: 9vh;
+      text-align: center;
+      line-height: 11vh;
+      font-size: 10vw;
+
+      position: relative;
+      right: 3vw;
+
+      transition: 0.5s;
+    }
+    .menuButton:hover {
+      transform: scale(0.8);
+    }
+    .logoContainer {
+      display: flex;
+      align-items: center;
+      width: 40vw;
+      margin-left: 1vw;
+      p {
+        font-size: 4vw;
+      }
+      .logo {
+        width: 9vh;
+        height: 9vh;
+        background-image: url("../img/logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  .options {
+    transition: 0.5s;
+    width: 100vw;
+    height: 0vh;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(0.8vh);
+    background-color: #1b1b1bbe;
+    padding-right: 5vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .option {
+      margin-top: 2.5vh;
+      font-size: 6vw;
+
+      .icon {
+        position: relative;
+        top: 0.5vh;
+        font-size: 6vw;
+
+        transition: 0.5s;
+      }
+    }
+    .projectsDropdown {
+      height: 0vh;
+
+      transition: 0.5s;
+
+      overflow: hidden;
+
+      .project {
+        margin-top: 2vh;
+        font-size: 5vw;
+        font-weight: 400;
+        text-align: right;
+        .projectIcon {
+          font-size: 5vw;
+          position: relative;
+          top: 0.5vh;
+          margin-left: 2vw;
+        }
+
+        .SP {
+          color: #fe5f2d;
+        }
+        .IS {
+          color: var(--blue3);
+        }
+        .AID {
+          color: #7f4ef1;
+        }
+        .ERD {
+          color: yellowgreen;
+        }
+      }
+    }
+    .important {
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbarMobile {
+    display: flex;
+  }
+}

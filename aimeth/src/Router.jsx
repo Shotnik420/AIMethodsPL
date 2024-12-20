@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import NavbarMobile from "./components/NavbarMobile";
 import Footer from "./components/Footer";
 import AnimatedRoutes from "./AnimatedRoutes";
 import axios from "axios";
@@ -23,6 +24,7 @@ export default function Router() {
   return (
     <BrowserRouter>
       <Navbar log={logged} />
+      <NavbarMobile log={logged} />
       <ScrollToTop>
         <AnimatedRoutes log={logged} FSA={fileServerAdress} />
       </ScrollToTop>

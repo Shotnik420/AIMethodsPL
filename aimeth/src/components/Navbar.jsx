@@ -45,7 +45,7 @@ function Navbar() {
             className="rozwijaneObject"
             onMouseEnter={() => {
               document.querySelectorAll(".rozwijaneObject")[0].style.color =
-                "#f1b04e";
+                "#FE5F2D";
             }}
             onMouseLeave={() => {
               document.querySelectorAll(".rozwijaneObject")[0].style.color =
